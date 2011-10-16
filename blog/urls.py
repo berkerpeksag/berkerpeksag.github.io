@@ -4,6 +4,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = patterns('blog.views',
     (r'^$', 'index'),
     (r'^archive/$', 'archive'),
+    (r'^contact/$', 'contact'),
     (r'^(?P<slug>[a-z-]+)/$', 'detail'),
 )
 
