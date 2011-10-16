@@ -5,7 +5,6 @@ urlpatterns = patterns('blog.views',
     (r'^$', 'index'),
     (r'^archive/$', 'archive'),
     (r'^(?P<slug>[a-z-]+)/$', 'detail'),
-    (r'^(?P<slug>[a-z-]+)/comment/$', 'comment'),
 )
 
 urlpatterns += staticfiles_urlpatterns()
