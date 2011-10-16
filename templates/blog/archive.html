@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block content %}
+
+<h2>Archive</h2>
+{% if archive_list %}
+    <ul id="list-archive">
+        {% for blog in archive_list %}
+        <li>
+            <a href="/{{ blog.slug }}" title="{{ blog.title }}">{{ blog.title }}</a>
+            <span class="date">({{ blog.pub_date }})</span>
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock content %}

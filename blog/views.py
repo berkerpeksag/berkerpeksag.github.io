@@ -21,3 +21,7 @@ def comment(request, slug):
     blog.save()
 
     return HttpResponseRedirect(reverse('blog.views.detail', args=(blog.slug,)))
+
+def archive(request):
+    archive_list = Post.objects.filter(status=1)
+    return render_to_response('blog/archive.html', {'archive_list': archive_list})

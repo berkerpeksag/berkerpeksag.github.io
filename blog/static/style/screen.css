@@ -9,6 +9,10 @@ a:hover {
     text-decoration: underline;
 }
 
+ul {
+    list-style-type: none;
+}
+
 header, footer, nav, article, section {
 	display: block;
 }
@@ -79,6 +83,22 @@ nav#tab #welcome {
             color: #333; font-size: 16px; line-height: 23px; margin-top: 20px;
         }
 
+#content h2 {
+    color: #003153; font-size: 25px; margin-bottom: 10px;
+}
+#content #list-archive {
+
+}
+    #list-archive li {
+        margin-bottom: 10px;
+    }
+        #list-archive li a {
+            font-size: 18px;
+        }
+        #list-archive li .date {
+            color: #666; font-size: 14px;
+        }
+
 #content #footnote {
     border-top: 1px solid #ddd; display: inline-block; font-size: 11px; margin-top: 20px; padding-top: 5px; width: 80px;
 }
@@ -109,7 +129,7 @@ footer div#mid-footer {
 }
 
 #footer nav ul {
-    float: right; list-style-type: none; margin-right: 10px;
+    float: right; margin-right: 10px;
 }
 
 #footer nav ul li {
