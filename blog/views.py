@@ -1,8 +1,5 @@
 from blog.models import Post
 from django.shortcuts import get_object_or_404, render_to_response
-from django.template import RequestContext
-import datetime
-
 
 def index(request):
     latest_blog_list = Post.objects.filter(status=1)[:5]
@@ -10,7 +7,7 @@ def index(request):
 
 def detail(request, slug):
     blog = get_object_or_404(Post, slug=slug)
-    return render_to_response('blog/detail.html', {'blog': blog}, context_instance=RequestContext(request))
+    return render_to_response('blog/detail.html', {'blog': blog})
 
 def archive(request):
     archive_list = Post.objects.filter(status=1)
