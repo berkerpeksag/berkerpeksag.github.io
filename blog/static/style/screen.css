@@ -1,0 +1,121 @@
+body {
+    color: #434343; font: normal 14px arial, helvetica, sans-serif;
+}
+
+a {
+    color: #003153; text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+header, footer, nav, article, section {
+	display: block;
+}
+
+div.container {
+    margin: 0 auto; width: 790px;
+}
+
+header {
+    background-color: #fff; border-bottom: 7px solid #003153; display: block; height: 90px; padding-top: 15px; position: fixed; top: 0; he\ight: 75px; width: 100%;
+}
+
+header div#logo {
+    float: left; padding-top: 17px;
+}
+
+header nav#main {
+    margin-left: 225px;
+}
+
+header nav#main ul {
+
+}
+
+header nav#main ul li {
+    float: left; padding: 23px 25px 0 0;
+}
+
+header nav#main ul li a {
+    border-bottom: 1px solid #ccc; color: #333; font: bold 15px arial, sans-serif;
+}
+
+header nav#main ul li a:hover {
+    color: #003153; text-decoration: none;
+}
+
+nav#tab {
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 97px; padding: 15px 0;
+}
+
+nav#tab #welcome {
+    color: #444; font-size: 16px; text-shadow: 0 2px 0 #fff;
+}
+
+#content {
+    padding: 20px 0;
+}
+
+#content article {
+    margin-bottom: 40px;
+}
+    #content article .info {
+
+    }
+        article .info h2 {
+            font-size: 25px; margin-bottom: 10px;
+        }
+            .info h2 a {
+
+            }
+        article .info .date {
+            color: #666;
+        }
+    #content article .body {
+
+    }
+        article .body p {
+            color: #333; font-size: 16px; line-height: 23px; margin-top: 20px;
+        }
+
+#content #footnote {
+    border-top: 1px solid #ddd; display: inline-block; font-size: 11px; margin-top: 20px; padding-top: 5px; width: 80px;
+}
+    #footnote a {
+        color: #888;
+    }
+
+#about {
+    background-color: #eaf7ff; border-top: 1px solid #e1edf5; color: #666; padding: 20px 0;
+}
+    #about h3 {
+        color: #003153; font-size: 20px;
+    }
+    #about p {
+        color: #333; line-height: 19px; width: 400px; margin-top: 10px;
+    }
+
+footer {
+    background-color: #003153; color: #5989ae; padding: 15px 0;
+}
+
+footer p {
+    
+}
+
+footer div#mid-footer {
+    background-color: #eaf7ff; border-top: 1px solid #e1edf5; color: #666; padding: 20px 0;
+}
+
+#footer nav ul {
+    float: right; list-style-type: none; margin-right: 10px;
+}
+
+#footer nav ul li {
+    float: left; padding-left: 15px;
+}
+
+#footer nav ul li  a {
+    color: #8ba8aa;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Berker Peksag - Welcome</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style/reset.css" media="all">
+    <link rel="stylesheet" href="/static/style/screen.css" media="screen">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <a href="/" title="Home"><img alt="Home" src="/static/images/logo.png"></a>
+            </div>
+
+            <nav id="main">
+                <ul>
+                    <li><a accesskey="a" href="/archive" title="Archive">Archive</a></li>
+                    <li><a accesskey="c" href="/contact" title="Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav id="tab">
+        <div class="container">
+            <div id="welcome">Welcome to my blog! Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+    </nav>
+
+    <div class="container" id="content">
+        {% block content %}{% endblock %}
+
+        <div id="footnote">
+            <a href="#" title="Print">Print page</a>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <h3>About me</h3>
+            <p>
+                Cras congue felis quis turpis cursus vel ornare nisl placerat. Phasellus vel tortor eget dolor dapibus ultricies. Sed accumsan, ligula ac pretium tincidunt, magna quam tincidunt nisi, vitae interdum metus velit nec arcu.
+            </p>
+            <p>
+                <a href="https://twitter.com/berkerpeksag"><strong>Follow me on Twitter</strong></a> and <a href="https://github.com.com/berkerpeksag"><strong>fork me on GitHub</strong></a>!
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" id="footer">
+            <nav>
+                <ul>
+                    <li><a href="/archive" title="Archive">Archive</a></li>
+                    <li><a href="/contact" title="Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <p>&copy;2011 &#8212; Berker Peksag</p>
+        </div>
+    </footer>
+</body>
+</html>
