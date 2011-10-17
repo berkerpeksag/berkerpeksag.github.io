@@ -7,7 +7,6 @@ import markdown
 class Post(models.Model):
     author = models.ForeignKey(User)
     status = models.BooleanField(default=False)
-    enable_comments = models.BooleanField(default=True)
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
     body = models.TextField()
