@@ -58,7 +58,7 @@ nav#tab #welcome {
 }
 
 #content {
-    padding: 20px 0;
+    min-height: 450px; padding: 20px 0;
 }
 
 #content article {
