@@ -11,7 +11,7 @@
         {% for blog in archive_list %}
         <li>
             <a href="/{{ blog.slug }}" title="{{ blog.title }}">{{ blog.title }}</a>
-            <span class="date">({{ blog.pub_date }})</span>
+            <span class="date">({{ blog.pub_date|timesince }} ago)</span>
         </li>
         {% endfor %}
     </ul>
