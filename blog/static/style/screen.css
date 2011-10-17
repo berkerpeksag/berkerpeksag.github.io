@@ -17,35 +17,14 @@ header, footer, nav, article, section {
 	display: block;
 }
 
-pre {
-    padding: 0px 24px;
-    max-width: 800px;
-    white-space: pre-wrap;
-}
 code {
     font-family: Consolas, Monaco, Andale Mono, monospace;
     line-height: 1.5;
     font-size: 13px;
 }
 
-blockquote {
-    border-left:.5em solid #eee;
-    padding: 0 2em;
-    margin-left:0;
-    max-width: 476px;
-}
-blockquote  cite {
-    font-size:14px;
-    line-height:20px;
-    color:#bfbfbf;
-}
-blockquote cite:before {
-    content: '\2014 \00A0';
-}
-
-blockquote p {
-    color: #666;
-    max-width: 460px;
+pre {
+    border-left:.5em solid #eee; margin-top: 20px; max-width: 600px; padding: 0 2em;
 }
 
 div.container {
