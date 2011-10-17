@@ -82,6 +82,9 @@ nav#tab #welcome {
         article .body p {
             color: #333; font-size: 16px; line-height: 23px; margin-top: 20px;
         }
+    #content article .share {
+        margin-top: 25px;
+    }
 
 #content h2 {
     color: #003153; font-size: 25px; margin-bottom: 10px;
