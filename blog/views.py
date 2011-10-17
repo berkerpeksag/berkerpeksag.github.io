@@ -10,5 +10,5 @@ def detail(request, slug):
     return render_to_response('blog/detail.html', {'blog': blog})
 
 def archive(request):
-    archive_list = Post.objects.filter(status=1)
+    archive_list = Post.objects.filter(status=True)
     return render_to_response('blog/archive.html', {'archive_list': archive_list})
