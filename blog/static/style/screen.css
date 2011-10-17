@@ -60,11 +60,11 @@ header nav#main ul li a:hover {
 }
 
 nav#tab {
-    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 97px; padding: 15px 0;
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 97px; padding: 17px 0;
 }
 
 nav#tab #welcome {
-    color: #444; font-size: 16px; text-shadow: 0 2px 0 #fff;
+    color: #444; font-size: 17px; text-shadow: 0 2px 0 #fff;
 }
 
 #content {
