@@ -32,7 +32,7 @@ div.container {
 }
 
 header {
-    background-color: #fff; border-bottom: 7px solid #003153; display: block; height: 90px; padding-top: 15px; position: fixed; top: 0; he\ight: 75px; width: 100%;
+    background-color: #fff; border-bottom: 7px solid #003153; display: block; height: 70px; padding-top: 5px; position: fixed; top: 0; he\ight: 65px; width: 100%;
 }
 
 header div#logo {
@@ -60,11 +60,11 @@ header nav#main ul li a:hover {
 }
 
 nav#tab {
-    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 97px; padding: 17px 0;
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 77px; padding: 12px 0;
 }
 
 nav#tab #welcome {
-    color: #444; font-size: 17px; text-shadow: 0 2px 0 #fff;
+    color: #444; font-size: 16px; text-shadow: 0 2px 0 #fff;
 }
 
 #content {
