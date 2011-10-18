@@ -10,8 +10,11 @@
     <ul id="list-archive">
         {% for blog in archive_list %}
         <li>
-            <a href="/{{ blog.slug }}" title="{{ blog.title }}">{{ blog.title }}</a>
-            <span class="date">({{ blog.pub_date|timesince }} ago)</span>
+            <p>
+                <a href="/{{ blog.slug }}" title="{{ blog.title }}">{{ blog.title }}</a>
+                <span class="date">({{ blog.pub_date|timesince }} ago)</span>
+            </p>
+            <p class="body">{{ blog.body|cut:"</p>" }}</p>
         </li>
         {% endfor %}
     </ul>

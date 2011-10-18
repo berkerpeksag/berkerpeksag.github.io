@@ -103,13 +103,16 @@ nav#tab #welcome {
     margin-top: 20px;
 }
     #list-archive li {
-        margin-bottom: 12px;
+        margin-bottom: 20px;
     }
         #list-archive li a {
             font-size: 18px;
         }
         #list-archive li .date {
             color: #666; font-size: 14px;
+        }
+        #list-archive li p.body {
+            color: #333; font-size: 14px; line-height: 19px; margin-top: 8px;
         }
 
 #content #footnote {
