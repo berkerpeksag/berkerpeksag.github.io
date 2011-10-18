@@ -60,7 +60,7 @@ header nav#main ul li a:hover {
 }
 
 nav#tab {
-    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 77px; padding: 12px 0;
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 77px; padding: 14px 0;
 }
 
 nav#tab #welcome {
