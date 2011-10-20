@@ -132,10 +132,10 @@ header nav#main ul li a:hover {
     background-color: #eaf7ff; border-top: 1px solid #e1edf5; color: #666; padding: 30px 0;
 }
     #about h3 {
-        color: #003153; font-size: 20px;
+        color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
     }
     #about p {
-        color: #333; line-height: 19px; width: 400px; margin-top: 10px;
+        color: #333; line-height: 19px; width: 400px; margin-top: 10px; text-shadow: 1px 1px 0 #fff;
     }
 
 footer {
