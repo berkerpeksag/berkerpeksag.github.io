@@ -118,7 +118,7 @@ header nav#main ul li a:hover {
             background-color: #eaf7ff; border: 1px groove #d1e3ef; border-radius: 10px; font-size: 12px; padding: 3px 9px; text-shadow: 1px 1px 0 #fff;
         }
         #list-archive li p.body {
-            color: #333; font-size: 14px; line-height: 19px; margin-top: 8px;
+            color: #333; font-size: 14px; line-height: 21px; margin-top: 8px;
         }
 
 #content #footnote {
@@ -135,7 +135,7 @@ header nav#main ul li a:hover {
         color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
     }
     #about p {
-        color: #333; line-height: 19px; width: 400px; margin-top: 10px; text-shadow: 1px 1px 0 #fff;
+        color: #333; line-height: 19px; width: 400px; line-height: 22px; margin-top: 10px; text-shadow: 1px 1px 0 #fff;
     }
 
 footer {
