@@ -15,6 +15,9 @@
                 <span class="date">({{ blog.pub_date|timesince }} ago)</span>
             </p>
             <p class="body">{{ blog.body|cut:"</p>" }}</p>
+            {% if blog.archive %}
+            <p class="archive"><span title="from my old blog">archive</span></p>
+            {% endif %}
         </li>
         {% endfor %}
     </ul>

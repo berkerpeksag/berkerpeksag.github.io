@@ -111,6 +111,12 @@ header nav#main ul li a:hover {
         #list-archive li .date {
             color: #666; font-size: 14px;
         }
+        #list-archive li p.archive {
+            margin-top: 10px;
+        }
+        #list-archive li p.archive span {
+            background-color: #eaf7ff; border: 1px groove #d1e3ef; border-radius: 10px; font-size: 12px; padding: 3px 9px; text-shadow: 1px 1px 0 #fff;
+        }
         #list-archive li p.body {
             color: #333; font-size: 14px; line-height: 19px; margin-top: 8px;
         }
