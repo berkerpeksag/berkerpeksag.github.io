@@ -130,8 +130,8 @@ header nav#main ul li a:hover {
             color: #333; font-size: 14px; line-height: 21px; margin-top: 8px;
         }
 
-#content #footnote {
-    border-top: 1px solid #ddd; display: inline-block; font-size: 11px; margin-top: 20px; padding-top: 5px; width: 80px;
+#footnote {
+    border-top: 1px solid #ddd; display: inline-block; font-size: 11px; margin-bottom: 25px; padding-top: 5px; width: 90px;
 }
     #footnote a {
         color: #888;
