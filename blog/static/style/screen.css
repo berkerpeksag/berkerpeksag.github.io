@@ -137,6 +137,9 @@ header nav#main ul li a:hover {
     #about p {
         color: #333; line-height: 19px; width: 400px; line-height: 22px; margin-top: 10px; text-shadow: 1px 1px 0 #fff;
     }
+    #about #mozilla {
+        float: right; padding-top: 7px;
+    }
 
 footer {
     background-color: #003153; color: #5989ae; padding: 15px 0;
