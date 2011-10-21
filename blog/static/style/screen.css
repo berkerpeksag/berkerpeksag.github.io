@@ -24,8 +24,11 @@ code {
 }
 
 pre {
-    border-left:.5em solid #eee; margin-top: 20px; max-width: 600px; padding: 0 2em;
+    background-color: #eaf7ff; border: 1px solid #d1e3ef; border-radius: 10px; color: #003153; margin-top: 20px; overflow-x: auto; padding: 10px 20px; width: 788px; w\idth: 748px;
 }
+    pre code {
+        font-size: 15px;
+    }
 
 div.container {
     margin: 0 auto; width: 790px;
