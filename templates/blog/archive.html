@@ -12,7 +12,7 @@
         <li>
             <p>
                 <a href="/{{ blog.slug }}" title="{{ blog.title }}">{{ blog.title }}</a>
-                <span class="date">({{ blog.pub_date|timesince }} ago)</span>
+                <span class="date" title="{{ blog.pub_date }}">({{ blog.pub_date|timesince }} ago)</span>
             </p>
             {% if blog.archive %}
             <p class="archive"><span title="from my old blog">archive</span></p>
