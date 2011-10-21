@@ -1,10 +1,10 @@
 # Django settings for berkerpeksag project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Berker Peksag', 'berker.peksag+blog@gmail.com'),
 )
 
 MANAGERS = ADMINS
