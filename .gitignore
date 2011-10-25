@@ -6,3 +6,4 @@ include
 lib
 .Python
 *.db
+*.sql
