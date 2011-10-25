@@ -108,25 +108,25 @@ header nav#main ul li a:hover {
 #content h2 {
     color: #003153; font-size: 25px; margin-bottom: 10px;
 }
-#content #list-archive {
+#content .list-archive {
     margin-top: 20px;
 }
-    #list-archive li {
+    .list-archive li {
         margin-bottom: 30px;
     }
-        #list-archive li a {
+        .list-archive li a {
             font-size: 18px;
         }
-        #list-archive li .date {
+        .list-archive li .date {
             color: #666; font-size: 14px;
         }
-        #list-archive li p.archive {
+        .list-archive li p.archive {
             margin-top: 10px;
         }
-        #list-archive li p.archive span {
+        .list-archive li p.archive span {
             background-color: #eaf7ff; border: 1px groove #d1e3ef; border-radius: 10px; font-size: 12px; padding: 3px 9px; text-shadow: 1px 1px 0 #fff;
         }
-        #list-archive li p.body {
+        .list-archive li p.body {
             color: #333; font-size: 14px; line-height: 21px; margin-top: 8px;
         }
 
