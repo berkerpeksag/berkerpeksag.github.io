@@ -5,11 +5,12 @@ import codecs
 from datetime import datetime
 import logging
 import MySQLdb
+import re
 
 logging.root.setLevel(logging.INFO)
 
 
-class ImportData(object):
+class DataImporter(object):
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
 
@@ -28,32 +29,31 @@ class ImportData(object):
             cursor.close()
             logging.info('Cursor closed.')
 
-    def create_sql(self, table=None):
-        if table is None:
-            raise Exception('You should write a table name.')
-
-        rows = self.query('SELECT * FROM %s ORDER BY fldTarih DESC' % table)
+    def create_sql(self, table):
+        rows = self.query('SELECT * FROM {} ORDER BY fldTarih DESC'.format(table))
 
         if rows:
             today = datetime.today().strftime('%Y-%m-%d')
             filename = '{0:>s}-{1:>s}.sql'.format(table, today)
 
-            f = codecs.open(filename, 'w', 'utf-8')
+            file = codecs.open(filename, 'w', 'utf-8')
             for row in rows:
-                olddate = str(row['fldTarih']) + ' ' + str(row['fldSaat'])
-                f.write('''INSERT INTO blog_post VALUES(%d, %d, %d, %d, '%s',
-                        '%s', "%s", '%s', '%s');''' % (
-                            row['fldID'], 1, row['fldAktif'], 1,
-                            row['fldBaslik'], row['fldBaslikEncode'],
-                            row['fldYazi'], olddate, olddate))
+                row['old_date'] = unicode(row['fldTarih']) + ' ' + unicode(row['fldSaat'])
+                row['user_id'] = 1
 
-            logging.info('File: %s', filename)
+                sql = """INSERT INTO blog_post VALUES({fldID:d}, {user_id:d}, {fldAktif:d},
+                         {user_id:d}, {fldBaslik:>s}, {fldBaslikEncode:>s}, {fldYazi:>s},
+                         {old_date:>s}, {old_date:>s});"""
+
+                file.write(re.escape(sql.format(**row)))
+
+            logging.info('File: {}'.format(filename))
 
 
 config = {'host': 'www.berkerpeksag.com', 'db': 'dbberkerpeksag',
           'user': 'root', 'passwd': 'berker88',
           'use_unicode': True, 'charset': 'utf8'}
 
-importer = ImportData(**config)
+importer = DataImporter(**config)
 
 importer.create_sql('tblbloglar')
