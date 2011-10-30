@@ -1,4 +1,6 @@
-# Django settings for berkerpeksag project.
+import os
+
+PROJECT_PATH = os.path.abspath(os.getcwd())
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -12,7 +14,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/home/berkerpeksag/hacking/berkerpeksag/blog.db',                      # Or path to database file if using sqlite3.
+        'NAME': '{:s}/blog.db'.format(PROJECT_PATH), # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -56,7 +58,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/berkerpeksag/hacking/berkerpeksag/static'
+STATIC_ROOT = '{:s}/static'.format(PROJECT_PATH)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -100,10 +102,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'berkerpeksag.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    '/home/berkerpeksag/hacking/berkerpeksag/templates'
+    os.path.join(PROJECT_PATH, 'templates'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
