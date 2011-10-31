@@ -2,7 +2,7 @@ import os
 
 PROJECT_PATH = os.path.abspath(os.getcwd())
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -159,3 +159,8 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
