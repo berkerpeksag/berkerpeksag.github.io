@@ -147,7 +147,7 @@ header nav#main ul li a:hover {
         color: #333; width: 400px; line-height: 22px; margin: 10px 0 0 77px; text-shadow: 1px 1px 0 #fff;
     }
     #about .avatar {
-        border: 4px #fff solid; border-radius: 5px; float: left; position: relative; top: 10px;
+        border: 4px #d1e3ef solid; border-radius: 5px; float: left; position: relative; top: 10px;
     }
     #mozilla {
         float: right; padding-top: 7px;
