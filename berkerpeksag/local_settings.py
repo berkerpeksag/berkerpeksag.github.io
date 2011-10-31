@@ -1,4 +1,4 @@
-PROJECT_PATH = os.path.abspath(os.getcwd())
+from settings import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -6,7 +6,7 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '{:s}/blog.db'.format(PROJECT_PATH), # Or path to database file if using sqlite3.
+        'NAME': '{:s}/blog_dev.db'.format(PROJECT_PATH), # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
