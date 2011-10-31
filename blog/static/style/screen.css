@@ -43,7 +43,7 @@ header div#logo {
 }
 
 header nav#main {
-    margin-left: 225px;
+    margin-left: 220px;
 }
 
 header nav#main ul {
@@ -55,7 +55,7 @@ header nav#main ul li {
 }
 
 header nav#main ul li a {
-    border-bottom: 1px solid #ccc; color: #333; font: bold 15px arial, sans-serif;
+    color: #333; font: bold 15px arial, sans-serif;
 }
 
 header nav#main ul li a:hover {
