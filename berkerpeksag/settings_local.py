@@ -1,3 +1,5 @@
+PROJECT_PATH = os.path.abspath(os.getcwd())
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
