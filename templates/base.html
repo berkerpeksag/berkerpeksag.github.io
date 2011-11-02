@@ -1,3 +1,4 @@
+{% load helpers %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,7 +30,7 @@
 
             <nav id="main">
                 <ul>
-                    <li><a accesskey="a" href="/archive/" title="Archive">Archive</a></li>
+                    <li><a accesskey="a"{% active request "/archive" %} href="/archive/" title="Archive">Archive</a></li>
                 </ul>
             </nav>
         </div>

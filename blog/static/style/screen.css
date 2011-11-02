@@ -58,6 +58,10 @@ header nav#main ul li a {
     color: #333; font: bold 15px arial, sans-serif;
 }
 
+header nav#main ul li a.active {
+    color: #003153;
+}
+
 header nav#main ul li a:hover {
     color: #003153; text-decoration: none;
 }
