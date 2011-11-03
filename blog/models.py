@@ -15,7 +15,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-pub_date']
-        
+
     @property
     def is_active(self):
         return self.status
