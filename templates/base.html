@@ -1,4 +1,5 @@
 {% load helpers %}
+{% load scripts %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -81,5 +82,7 @@
             <p>&copy; {% now "Y" %} &#8212; Berker Peksag</p>
         </div>
     </footer>
+
+    {% script request "//platform.twitter.com/widgets.js" "/archive" %}
 </body>
 </html>
