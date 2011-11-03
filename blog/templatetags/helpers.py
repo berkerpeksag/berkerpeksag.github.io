@@ -6,4 +6,4 @@ register = template.Library()
 def active(request, pattern):
     if request.path.startswith(pattern):
         return ' class="active"'
-    return None
+    return ''
