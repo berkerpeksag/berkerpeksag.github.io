@@ -10,7 +10,7 @@ class Post(models.Model):
     )
 
     author = models.ForeignKey(User)
-    status = models.BooleanField(default=False)
+    status = models.BooleanField('Active', default=False)
     archive = models.BooleanField(default=False)
     language = models.CharField(max_length=2, choices=LANGUAGES, default='tr')
     title = models.CharField(max_length=200)
