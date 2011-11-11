@@ -17,8 +17,8 @@ class Migration(SchemaMigration):
             ('title', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('slug', self.gf('django.db.models.fields.SlugField')(unique=True, max_length=50, db_index=True)),
             ('body', self.gf('django.db.models.fields.TextField')()),
-            ('pub_date', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2011, 11, 11, 21, 43, 49, 818127))),
-            ('update_date', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2011, 11, 11, 21, 43, 49, 818162))),
+            ('pub_date', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2011, 11, 11, 21, 44, 52, 747001))),
+            ('update_date', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2011, 11, 11, 21, 44, 52, 747033))),
         ))
         db.send_create_signal('blog', ['Post'])
 
@@ -65,11 +65,11 @@ class Migration(SchemaMigration):
             'author': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']"}),
             'body': ('django.db.models.fields.TextField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'pub_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2011, 11, 11, 21, 43, 49, 818127)'}),
+            'pub_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2011, 11, 11, 21, 44, 52, 747001)'}),
             'slug': ('django.db.models.fields.SlugField', [], {'unique': 'True', 'max_length': '50', 'db_index': 'True'}),
             'status': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
-            'update_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2011, 11, 11, 21, 43, 49, 818162)'})
+            'update_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2011, 11, 11, 21, 44, 52, 747033)'})
         },
         'contenttypes.contenttype': {
             'Meta': {'ordering': "('name',)", 'unique_together': "(('app_label', 'model'),)", 'object_name': 'ContentType', 'db_table': "'django_content_type'"},

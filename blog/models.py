@@ -4,9 +4,15 @@ from django.contrib.auth.models import User
 
 
 class Post(models.Model):
+    LANGUAGES = (
+        (u'tr', u'Turkish'),
+        (u'en', u'English'),
+    )
+
     author = models.ForeignKey(User)
-    status = models.BooleanField('Active', default=False)
+    status = models.BooleanField(default=False)
     archive = models.BooleanField(default=False)
+    language = models.CharField(max_length=2, choices=LANGUAGES, default='tr')
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
     body = models.TextField()

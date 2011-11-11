@@ -8,25 +8,14 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         
-        # Adding model 'Post'
-        db.create_table('blog_post', (
-            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('author', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
-            ('status', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('archive', self.gf('django.db.models.fields.BooleanField')(default=False)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=200)),
-            ('slug', self.gf('django.db.models.fields.SlugField')(unique=True, max_length=50, db_index=True)),
-            ('body', self.gf('django.db.models.fields.TextField')()),
-            ('pub_date', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2011, 11, 11, 21, 43, 49, 818127))),
-            ('update_date', self.gf('django.db.models.fields.DateTimeField')(default=datetime.datetime(2011, 11, 11, 21, 43, 49, 818162))),
-        ))
-        db.send_create_signal('blog', ['Post'])
+        # Adding field 'Post.language'
+        db.add_column('blog_post', 'language', self.gf('django.db.models.fields.CharField')(default='tr', max_length=2), keep_default=False)
 
 
     def backwards(self, orm):
         
-        # Deleting model 'Post'
-        db.delete_table('blog_post')
+        # Deleting field 'Post.language'
+        db.delete_column('blog_post', 'language')
 
 
     models = {
@@ -65,11 +54,12 @@ class Migration(SchemaMigration):
             'author': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['auth.User']"}),
             'body': ('django.db.models.fields.TextField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'pub_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2011, 11, 11, 21, 43, 49, 818127)'}),
+            'language': ('django.db.models.fields.CharField', [], {'default': "'tr'", 'max_length': '2'}),
+            'pub_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2011, 11, 11, 21, 49, 0, 457635)'}),
             'slug': ('django.db.models.fields.SlugField', [], {'unique': 'True', 'max_length': '50', 'db_index': 'True'}),
             'status': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
-            'update_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2011, 11, 11, 21, 43, 49, 818162)'})
+            'update_date': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2011, 11, 11, 21, 49, 0, 457670)'})
         },
         'contenttypes.contenttype': {
             'Meta': {'ordering': "('name',)", 'unique_together': "(('app_label', 'model'),)", 'object_name': 'ContentType', 'db_table': "'django_content_type'"},
