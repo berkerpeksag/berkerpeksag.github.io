@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     author = models.ForeignKey(User)
-    status = models.BooleanField(default=False)
+    status = models.BooleanField('Active', default=False)
     archive = models.BooleanField(default=False)
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
