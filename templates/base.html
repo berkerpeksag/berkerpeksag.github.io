@@ -5,8 +5,8 @@
     <head>
     <title>{% block title %}Home{% endblock %} - Berker Peksag</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/static/style/reset.css" media="all">
-    <link rel="stylesheet" href="/static/style/screen.css" media="screen">
+    <link rel="stylesheet" href="{{ STATIC_URL }}style/reset.css" media="all">
+    <link rel="stylesheet" href="{{ STATIC_URL }}style/screen.css" media="screen">
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAp0lEQVR4nO3XIQ4CMRCF4b/siEkICQmch0tgsZxiL4LHcAQsd0GQYFYgKiYU0S7bC+zWTM0kr+J9bVWDfS3RaHWhC6tW5eNygAMc4AAHOMABDnCAAxwgwyc2K99t1sjldm8G6M9Hwv5wSojmxBa4jarr/bgGGZ6vHC5RXiNKn6AKus2BxWlzzglg1AAtQdmce4pCHG8AptNbSWadCsT/E4SUmv3OAfgBvBZQo9Pdx/gAAAAASUVORK5CYII=">
     {% if not debug_mode %}
     <script>
@@ -60,7 +60,7 @@
             </div>
             <div id="about">
                 <h3>About me</h3>
-                <img alt="Me!" class="avatar" src="/static/images/me.jpg">
+                <img alt="Me!" class="avatar" src="{{ STATIC_URL }}images/me.jpg">
                 <p>
                    I'm a passionate, open source lover software developer from Istanbul, Turkey with extensive PHP experience who also has a crush on Python and JavaScript.
                 </p>

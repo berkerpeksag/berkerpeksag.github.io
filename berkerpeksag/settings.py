@@ -58,7 +58,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '{:s}/static'.format(PROJECT_PATH)
+STATIC_ROOT = '{:s}/static/'.format(PROJECT_PATH)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -69,6 +69,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '{:s}/blog/static'.format(PROJECT_PATH),
 )
 
 # List of finder classes that know how to find static files in
@@ -142,14 +143,12 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
+
     },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
-            'filters': ['require_debug_false'],
+            'filters': [],
             'class': 'django.utils.log.AdminEmailHandler'
         }
     },
