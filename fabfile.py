@@ -65,8 +65,13 @@ def configure():
         run('virtualenv --no-site-packages .')
         run('source bin/activate')
         run('%(root)s%(project_name)s/bin/pip install -r %(root)s%(project_name)s/requirements.txt' % env)
+        static()
+        put_db()
         sudo('ln -s /home/wakefield/berkerpeksag/conf/nginx.conf /etc/nginx/sites-enabled/berkerpeksag.com')
-        restart_nginx()
+        sudo('bin/echo_supervisord_conf > /etc/supervisord.conf')
+        sudo('echo conf/supervisor.conf >> /etc/supervisord.conf')
+        run('bin/supervisord')
+        
 
 
 def setup():
