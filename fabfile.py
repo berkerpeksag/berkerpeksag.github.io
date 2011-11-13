@@ -83,6 +83,11 @@ def put_db():
     put('blog.db', '%(root)s%(project_name)s/blog.db' % env, use_sudo=True)
 
 
+def delete_db():
+    with cd('%(root)s%(project_name)s' % env):
+        run('rm *.db')
+
+
 def clean():
     stop()
     sudo('unlink /tmp/supervisor.sock')
