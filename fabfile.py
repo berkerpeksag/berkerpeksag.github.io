@@ -12,9 +12,6 @@ env.root = '/home/wakefield/'
 def deploy():
     with cd('%(root)s%(project_name)s' % env):
         run('git pull')
-        put('conf/gunicorn.conf', '/etc/init/%(project_name)s.conf' %
-                                  env, use_sudo=True)
-        run('initctl reload-configuration')
 
 
 def start():
@@ -69,11 +66,12 @@ def configure():
         run('source bin/activate')
         run('%(root)s%(project_name)s/bin/pip install -r %(root)s%(project_name)s/requirements.txt' % env)
         sudo('ln -s /home/wakefield/berkerpeksag/conf/nginx.conf /etc/nginx/sites-enabled/berkerpeksag.com')
+        restart_nginx()
 
 
 def setup():
     sudo('apt-get update && apt-get upgrade && apt-get install git-core sqlite3 python-sqlite python-setuptools python-pip python-dev build-essential nginx emacs23 curl libcurl3')
-    sudo('pip install virtualenv')
+    run('pip install virtualenv')
 
 
 def put_db():
