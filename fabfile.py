@@ -16,23 +16,17 @@ def deploy():
 
 def start():
     """Start the Gunicorn process"""
-    run('start %(project_name)s' % env)
+    run('%(root)s%(project_name)s/bin/supervisorctl start gunicorn' % env)
 
 
 def stop():
     """Stop the Gunicorn process"""
-    run('stop %(project_name)s' % env)
-
-
-def reload():
-    """Reload the Gunicorn configuration"""
-    run('reload %(project_name)s' % env)
+    run('%(root)s%(project_name)s/bin/supervisorctl stop gunicorn' % env)
 
 
 def restart():
     """Restart the Gunicorn process"""
-    stop_gunicorn()
-    start_gunicorn()
+    run('%(root)s%(project_name)s/bin/supervisorctl restart gunicorn' % env)
 
 
 def status():
@@ -66,11 +60,14 @@ def configure():
         run('source bin/activate')
         run('%(root)s%(project_name)s/bin/pip install -r %(root)s%(project_name)s/requirements.txt' % env)
         static()
-        put_db()
         sudo('ln -s /home/wakefield/berkerpeksag/conf/nginx.conf /etc/nginx/sites-enabled/berkerpeksag.com')
-        sudo('bin/echo_supervisord_conf > /etc/supervisord.conf')
-        sudo('echo conf/supervisor.conf >> /etc/supervisord.conf')
+        run('bin/echo_supervisord_conf > supervisord.conf')
+        sudo('mv supervisord.conf /etc/supervisord.conf')
+        sudo('cat conf/supervisor.conf >> /etc/supervisord.conf')
         run('bin/supervisord')
+
+    put_db()
+    restart_nginx()
         
 
 
@@ -84,5 +81,15 @@ def put_db():
 
 
 def clean():
+    stop()
+    sudo('unlink /tmp/supervisor.sock')
+
+    with cd(env.root):
+        sudo('rm -r berkerpeksag/')
+        sudo('rm /etc/nginx/sites-enabled/berkerpeksag.com')
+        sudo('rm /etc/supervisord.conf')
+
+
+def clean_pyc():
     """Remove all .pyc files"""
     local('find . -name "*.pyc" -exec rm {} \;')
