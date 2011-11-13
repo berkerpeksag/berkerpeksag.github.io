@@ -71,7 +71,6 @@ def configure():
 
     put_db()
     restart_nginx()
-        
 
 
 def setup():
