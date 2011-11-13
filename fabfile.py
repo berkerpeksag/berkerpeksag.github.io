@@ -13,6 +13,8 @@ def deploy():
     with cd('%(root)s%(project_name)s' % env):
         run('git pull')
 
+    static()
+
 
 def start():
     """Start the Gunicorn process"""
@@ -40,6 +42,7 @@ def restart_nginx():
 
 def static():
     with cd('%(root)s%(project_name)s' % env):
+        sudo('rm -r static/')
         run('source bin/activate')
         sudo('bin/python manage.py collectstatic')
         restart_nginx()
