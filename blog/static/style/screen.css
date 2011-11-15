@@ -71,7 +71,7 @@ header nav#main ul li a:hover {
 }
 
 #splash #welcome {
-    color: #444; font-size: 16px; text-shadow: 1px 1px 0 #fff;
+    color: #333; font-size: 16px; text-shadow: 1px 1px 0 #fff;
 }
 
 #content {
@@ -145,16 +145,16 @@ header nav#main ul li a:hover {
     }
 
 #bottom {
-    background-color: #eaf7ff; border-top: 1px solid #e1edf5; color: #666; padding: 30px 0;
+    background-color: #dff2ff; border-top: 1px solid #d1e3ef; color: #666; padding: 30px 0;
 }
     #about h3 {
         color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
     }
     #about p {
-        color: #333; width: 400px; line-height: 22px; margin: 10px 0 0 77px; text-shadow: 1px 1px 0 #fff;
+        color: #333; width: 400px; line-height: 22px; margin: 10px 0 0 72px; text-shadow: 1px 1px 0 #fff;
     }
     #about .avatar {
-        border: 4px #d1e3ef solid; border-radius: 5px; float: left; position: relative; top: 10px;
+        border-radius: 5px; float: left; position: relative; top: 13px;
     }
     #mozilla {
         float: right; padding-top: 7px;
