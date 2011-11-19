@@ -1,5 +1,4 @@
-from fabric.api import env, run, cd, sudo, put, require, settings, hide, puts
-from fabric.contrib import project, files
+from fabric.api import env, run, cd, sudo, put, local
 
 env.hosts = ['berkerpeksag.com']
 env.host = env.hosts[0]
