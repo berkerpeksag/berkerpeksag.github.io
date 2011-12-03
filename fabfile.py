@@ -13,6 +13,8 @@ def deploy():
         run('git pull')
 
     static()
+    restart_nginx()
+    restart()
 
 
 def start():
