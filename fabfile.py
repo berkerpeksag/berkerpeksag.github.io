@@ -32,11 +32,6 @@ def restart():
     run('%(root)s%(project_name)s/bin/supervisorctl restart gunicorn' % env)
 
 
-def status():
-    """Status of Gunicorn"""
-    run('status %(project_name)s' % env)
-
-
 def restart_nginx():
     sudo('/etc/init.d/nginx restart')
 
