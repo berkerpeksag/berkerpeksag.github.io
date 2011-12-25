@@ -151,13 +151,13 @@ header nav#main ul li a:hover {
         color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
     }
     #about p {
-        color: #333; width: 400px; line-height: 22px; margin: 10px 0 0 72px; text-shadow: 1px 1px 0 #fff;
+        color: #333; width: 490px; line-height: 22px; margin: 10px 0 0 72px; text-shadow: 1px 1px 0 #fff;
     }
     #about .avatar {
         border-radius: 5px; float: left; position: relative; top: 13px;
     }
-    #mozilla {
-        float: right; padding-top: 7px;
+    #github-badge {
+        float: right; padding-top: 37px;
     }
 
 footer {
