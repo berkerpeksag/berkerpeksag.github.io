@@ -1,5 +1,5 @@
 body {
-    color: #434343; font: normal 14px arial, helvetica, sans-serif;
+    color: #434343; font: normal 14px 'Droid Sans', Arial, sans-serif;
 }
 
 a {
@@ -18,7 +18,7 @@ header, footer, nav, article, section {
 }
 
 code {
-    font-family: Consolas, Monaco, Andale Mono, monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
     line-height: 1.5;
     font-size: 13px;
 }
@@ -55,7 +55,7 @@ header nav#main ul li {
 }
 
 header nav#main ul li a {
-    color: #333; font: bold 15px arial, sans-serif;
+    color: #333; font-size: 15px; font-weight: bold;
 }
 
 header nav#main ul li a.active {
