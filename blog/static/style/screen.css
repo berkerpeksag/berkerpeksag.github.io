@@ -19,7 +19,7 @@ header, footer, nav, article, section {
 
 code {
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
-    line-height: 1.5;
+    line-height: 1.5em;
     font-size: 13px;
 }
 
@@ -97,7 +97,7 @@ header nav#main ul li a:hover {
 
     }
         article .body p {
-            color: #333; font-size: 16px; line-height: 23px; margin-top: 20px;
+            color: #333; font-size: 16px; line-height: 1.5em; margin-top: 20px;
         }
         article .body p a {
             font-weight: bold;
@@ -106,7 +106,7 @@ header nav#main ul li a:hover {
             display: block; list-style-type: square; list-style-position: inside; margin: 20px 0 0 25px;
         }
             .body ul li {
-                font-size: 16px; line-height: 23px; margin-bottom: 10px;
+                font-size: 16px; line-height: 1.5em; margin-bottom: 10px;
             }
     #content article .share {
         margin-top: 25px;
