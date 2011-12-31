@@ -18,8 +18,11 @@ header, footer, nav, article, section {
 }
 
 blockquote {
-    border-left: 5px solid #ddd; margin: 0 23px; padding-left: 15px;
+    background-color: #eaf7ff; border-color: #d1e3ef; border-radius: 10px; border-style: solid; border-width: 1px 1px 1px 5px; margin: 20px 23px 0 23px;
 }
+    article .body blockquote p {
+        color: #003153; margin-top: 0; padding: 10px 15px;
+    }
 
 code {
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
