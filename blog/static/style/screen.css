@@ -25,9 +25,7 @@ blockquote {
     }
 
 code {
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
-    line-height: 1.5em;
-    font-size: 13px;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace, serif; font-size: 13px; line-height: 1.5em;
 }
 
 pre {
