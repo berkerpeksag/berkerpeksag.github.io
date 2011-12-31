@@ -14,7 +14,7 @@ ul {
 }
 
 header, footer, nav, article, section {
-	display: block;
+    display: block;
 }
 
 blockquote {
@@ -169,7 +169,7 @@ footer {
 }
 
 footer p {
-    
+
 }
 
 footer div#mid-footer {
