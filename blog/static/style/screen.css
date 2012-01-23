@@ -158,6 +158,9 @@ header nav#main ul li a:hover {
     #about p {
         color: #333; width: 490px; line-height: 22px; margin: 10px 0 0 72px; text-shadow: 1px 1px 0 #fff;
     }
+    #about a {
+        font-weight: bold;
+    }
     #about .avatar {
         border-radius: 5px; float: left; position: relative; top: 13px;
     }
