@@ -40,39 +40,15 @@ div.container {
 }
 
 header {
-    background-color: #fff; border-bottom: 7px solid #003153; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); display: block; height: 70px; padding-top: 5px; position: fixed; top: 0; he\ight: 65px; width: 100%;
+    background-color: #fff; border-bottom: 7px solid #003153; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); display: block; height: 45px; position: fixed; top: 0; width: 100%;
 }
 
 header div#logo {
-    float: left; padding-top: 17px;
-}
-
-header nav#main {
-    margin-left: 220px;
-}
-
-header nav#main ul {
-
-}
-
-header nav#main ul li {
-    float: left; padding: 23px 25px 0 0;
-}
-
-header nav#main ul li a {
-    color: #333; font-size: 15px; font-weight: bold;
-}
-
-header nav#main ul li a.active {
-    color: #003153;
-}
-
-header nav#main ul li a:hover {
-    color: #003153; text-decoration: none;
+    float: left; padding-top: 11px;
 }
 
 #splash {
-    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 77px; padding: 14px 0;
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 53px; padding: 10px 0;
 }
 
 #splash #welcome {
@@ -153,7 +129,7 @@ header nav#main ul li a:hover {
     background-color: #dff2ff; border-top: 1px solid #d1e3ef; color: #666; padding: 30px 0;
 }
     #about h3 {
-        color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
+        color: #003153; font-size: 20px; margin-left: 72px; text-shadow: 1px 1px 0 #fff;
     }
     #about p {
         color: #333; width: 490px; line-height: 22px; margin: 10px 0 0 72px; text-shadow: 1px 1px 0 #fff;
@@ -185,7 +161,7 @@ footer div#mid-footer {
 }
 
 #footer nav ul li {
-    float: left; padding-left: 15px;
+    float: left; padding-left: 25px;
 }
 
 #footer nav ul li a {
