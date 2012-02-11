@@ -44,7 +44,7 @@ pre {
 }
 
 header {
-    background-color: #fff; border-bottom: 7px solid #003153; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); display: block; padding-bottom: 6px; width: 100%;
+    background-color: #fff; border-bottom: 7px solid #003153; display: block; padding-bottom: 6px; width: 100%;
 }
 
 header .logo {
