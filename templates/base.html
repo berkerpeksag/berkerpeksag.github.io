@@ -28,35 +28,35 @@
 <body>
     <header>
         <div class="container">
-            <div id="logo">
+            <div class="logo">
                 <a href="/" title="Home"><img alt="Home" src="data:image/png;base64,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"></a>
             </div>
         </div>
     </header>
 
-    <div id="splash">
+    <div class="splash">
         <div class="container">
-            <div id="welcome">Hello! I'm a passionate, open source lover software developer from Istanbul, Turkey.</div>
+            <div class="welcome">Hello! I'm a passionate, open source lover software developer from Istanbul, Turkey.</div>
         </div>
     </div>
 
-    <div class="container" id="content">
+    <div class="container content">
         {% block content %}{% endblock %}
     </div>
 
     <div class="container">
-        <div id="footnote">
+        <div class="footnote">
             <a href="javascript:window.print();" title="Print">Print</a>
         </div>
     </div>
 
-    <div id="bottom">
+    <div class="bottom">
         <div class="container">
-            <div id="github-badge">
+            <div class="github-badge">
                 <iframe src="http://githubbadge.appspot.com/badge/berkerpeksag?s=1"
                         style="border: 0; height: 150px; width: 200px; overflow: hidden;"></iframe>
             </div>
-            <div id="about">
+            <div class="about">
                 <h3>About me</h3>
                 <img alt="Me!" class="avatar" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD//gADKv/bAEMABQMEBAQDBQQEBAUFBQYHDAgHBwcHDwsLCQwRDxISEQ8RERMWHBcTFBoVEREYIRgaHR0fHx8TFyIkIh4kHB4fHv/bAEMBBQUFBwYHDggIDh4UERQeHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHv/AABEIADwANwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAMEBQcCCAH/xAAxEAABAwMDAgYBAwMFAAAAAAABAgMEAAURBhIhMUEHEyJRYXEUMjOBFiOhRFKRscH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AlRLUhMUPOuuAYHO41Q65uTljfNptcOVNvCh+1yEsjONyz7ZrR4LTa46CAUDGU7TyPihIoaRfbq+k+Y888A44o5IwkADJ/wCfsk0AM5Z9ePOpltasXAd2j+00VbQaKvDJ2/S9Ux9Pa41ff4AnLDUCbBlZaW72bWFcpJ7e54p2ZcIFtT582U2ygdM85+hVfqWZHn6PmS7cXQ+ztdYcDakrQ6lQKFDIzkKxQaBrXw3uMTVsaytauv8AJZfgOy1uSnM42OITgYI/396qm9PMWdtMJV1kPNKcPmqcUM9Cf46U29dtTauMW46iujUp+OwuOEMsBnZuKStKtvXlAqtagIizHAyj1kIxk9yrrmgdZuUJl9Cn3gzHBIC3DweOBSqi8REvJ01NbWUqKCjcPMyR60+/SlQSx4o2KLb1lLM9SkNueQpUchL5RkenvjI69qBrReh4h/mLiOyLfIZ2uOspX6ecgqB78gda48RZ+nbXpZN9sttiolzlqZZ/WtDSVBW8oClHb34+ayjROpZGnNQtTUrX+OsFuQ2ngKQfj3HX+KD0ILLGfsiWZzq3FoIPm9z8Va25qHG04W4+CPS0hJGOcgAfdZwxMiSjEli6rfjyF9UrwlH2nPBojnMomWW4RrTKUI7bLjzj+7osIJSEn3yB9UBKrTd70w3NuqWH5cJ5TSn0syMOMJSgJKtpGFADk4NduzEpusFtqR+Q3IQlaHNwIIStOCCOud1edLT4q+INsZ/HY1RMdZ6FqSEvpUPY7wTj+ajaeun5s1yK/DZcflJU0ztQPStR4IznH8UG+eMU+NB0fNdwhTjzjaUhABUs7wT98A0qx/VTi9G6kQIkJTK3IoStDhISeRlQH2OuaVAOaklOPMMNec6porWoNlXpSeBkDtQ+4jBq/wBReUIVoQ2BvMZbjh9ypxQH+EiqN/0gE+9ARaO1JCtbCoV0twlRyorbcQB5iD3HPUfFEerPExMqwKs1hjORGnklDzikhPoPVKQD37ms+fgzIrTa5cR9lDqdzS3GykLHwT1qMcds0HB96djuLZcQ4hRSpJBBHUGmlnivoORQFGvdUSdUTIMyWk+exESw4rj1kE5V070qHf3G8dweKVAcwNE3e/WSHcYL0YpRHSny1qKT+pR+u9D+q9NXaxRG3bi00hDjmxBQ4FZOCf8Aytn8LwP6TiDH+lbP/dSr/BhzojkeZHafa3btq0g8jigA7y3DuXh5bWn57UZJ8taXHMqS2sgjnHIz0OazW4w34EtcWQkJcR1woKBB6EEdQfej7XtggwrOkRFPstNrJSylfoyfsZ/zVfp63W1fh7crrJgNSZUYqDSnVrwMlKegUBxuJHzigBV8nFWthsU+8ygxDSgcZK1nCQK400y3Iv0Rp1IUhS+Qfo1qlmszDKZcpMmUVx1ICAXBjkZ54+aCBZ/Da2/iOIm3Fx2WoDb5fpQjnn5PH1SouWvyYipCUpLiQOT3yaVB/9k=">
                 <p>
@@ -76,7 +76,7 @@
     </div>
 
     <footer>
-        <div class="container" id="footer">
+        <div class="container footer">
             <nav>
                 <ul>
                     <li><a href="/archive/" title="Archive"><strong>Archive</strong></a></li>

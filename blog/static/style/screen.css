@@ -13,6 +13,10 @@ ul {
     list-style-type: none;
 }
 
+h2 {
+    color: #003153; font-size: 25px; margin-bottom: 10px;
+}
+
 header, footer, nav, article, section {
     display: block;
 }
@@ -25,60 +29,51 @@ blockquote {
     }
 
 code {
-    font-family: Consolas, Monaco, 'Andale Mono', monospace, serif; font-size: 13px; line-height: 1.5em;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace, serif; line-height: 1.5em;
 }
 
 pre {
-    background-color: #eaf7ff; border: 1px solid #d1e3ef; border-radius: 10px; color: #003153; margin-top: 20px; overflow-x: auto; padding: 10px 20px; width: 788px; w\idth: 748px;
+    background-color: #eaf7ff; border: 1px solid #d1e3ef; border-radius: 10px; color: #003153; margin-top: 20px; overflow-x: auto; padding: 10px 20px;
 }
     pre code {
         font-size: 15px;
     }
 
-div.container {
+.container {
     margin: 0 auto; width: 700px;
 }
 
 header {
-    background-color: #fff; border-bottom: 7px solid #003153; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); display: block; height: 45px; position: fixed; top: 0; width: 100%;
+    background-color: #fff; border-bottom: 7px solid #003153; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); display: block; padding-bottom: 6px; position: fixed; top: 0; width: 100%;
 }
 
-header div#logo {
+header .logo {
     float: left; padding-top: 11px;
 }
 
-#splash {
+.splash {
     background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; margin-top: 53px; padding: 10px 0;
 }
 
-#splash #welcome {
+.splash .welcome {
     color: #333; font-size: 16px; text-shadow: 1px 1px 0 #fff;
 }
 
-#content {
+.content {
     min-height: 450px; padding: 30px 0;
 }
 
-#content article {
+.content article {
     margin-bottom: 40px;
 }
-    #content article .info {
-
-    }
-        article .info h2 {
-            font-size: 25px; margin-bottom: 10px;
-        }
-            .info h2 a {
-
-            }
         article .info .date {
             color: #666;
         }
-    #content article .body {
-
+    article .body {
+        font-size: 16px; line-height: 1.5em;
     }
         article .body p {
-            color: #333; font-size: 16px; line-height: 1.5em; margin-top: 20px;
+            color: #333; margin-top: 20px;
         }
         article .body p a {
             font-weight: bold;
@@ -87,26 +82,23 @@ header div#logo {
             display: block; list-style-type: square; list-style-position: inside; margin: 20px 0 0 25px;
         }
             .body ul li {
-                font-size: 16px; line-height: 1.5em; margin-bottom: 10px;
+                margin-bottom: 10px;
             }
-    #content article .share {
+    .content article .share {
         margin-top: 25px;
     }
 
-#content h2 {
-    color: #003153; font-size: 25px; margin-bottom: 10px;
-}
-#content .list-archive {
+.content .list-archive {
     border-top: 1px solid #ddd; margin: 20px 0 30px 0;
 }
     .list-archive li {
-        border-bottom: 1px solid #ddd; padding: 10px 0;
+        border-bottom: 1px solid #ddd; font-size: 14px; padding: 10px 0;
     }
         .list-archive li a {
             font-size: 16px;
         }
         .list-archive li .date {
-            color: #666; font-size: 14px;
+            color: #666;
         }
         .list-archive li p.archive {
             margin-top: 10px;
@@ -115,32 +107,32 @@ header div#logo {
             background-color: #eaf7ff; border: 1px groove #d1e3ef; border-radius: 10px; font-size: 12px; padding: 3px 9px; text-shadow: 1px 1px 0 #fff;
         }
         .list-archive li p.body {
-            color: #333; font-size: 14px; line-height: 21px; margin-top: 8px;
+            color: #333; line-height: 21px; margin-top: 8px;
         }
 
-#footnote {
+.footnote {
     border-top: 1px solid #ddd; display: inline-block; font-size: 11px; margin-bottom: 25px; padding-top: 5px; width: 90px;
 }
-    #footnote a {
+    .footnote a {
         color: #888;
     }
 
-#bottom {
+.bottom {
     background-color: #dff2ff; border-top: 1px solid #d1e3ef; color: #666; padding: 30px 0;
 }
-    #about h3 {
+    .about h3 {
         color: #003153; font-size: 20px; margin-left: 72px; text-shadow: 1px 1px 0 #fff;
     }
-    #about p {
+    .about p {
         color: #333; width: 490px; line-height: 22px; margin: 10px 0 0 72px; text-shadow: 1px 1px 0 #fff;
     }
-    #about a {
+    .about a {
         font-weight: bold;
     }
-    #about .avatar {
+    .about .avatar {
         border-radius: 5px; float: left; position: relative; top: 13px;
     }
-    #github-badge {
+    .github-badge {
         float: right; padding-top: 37px;
     }
 
@@ -148,18 +140,18 @@ footer {
     background-color: #003153; color: #5989ae; padding: 15px 0;
 }
 
-footer div#mid-footer {
+footer .mid-footer {
     background-color: #eaf7ff; border-top: 1px solid #e1edf5; color: #666; padding: 20px 0;
 }
 
-#footer nav ul {
+footer nav ul {
     float: right;
 }
 
-#footer nav ul li {
+footer nav ul li {
     float: left; padding-left: 25px;
 }
 
-#footer nav ul li a {
+footer nav ul li a {
     color: #8ba8aa;
 }
