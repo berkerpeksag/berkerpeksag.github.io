@@ -26,5 +26,8 @@ class Post(models.Model):
     def is_active(self):
         return self.status
 
+    def get_absolute_url(self):
+        return '/{:s}/'.format(self.slug)
+
     def __unicode__(self):
         return self.title
