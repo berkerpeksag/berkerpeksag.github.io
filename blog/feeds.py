@@ -1,5 +1,13 @@
 from django.contrib.syndication.views import Feed
+from django.utils.safestring import mark_safe
+
 from blog.models import Post
+
+import markdown
+
+
+def _markdown(value):
+    return mark_safe(markdown.markdown(value))
 
 
 class LatestEntriesFeed(Feed):
@@ -26,4 +34,4 @@ class LatestEntriesFeed(Feed):
         return item.title
 
     def item_description(self, item):
-        return item.body
+        return _markdown(item.body)
