@@ -1,4 +1,4 @@
-from fabric.api import env, run, cd, sudo, put, local
+from fabric.api import env, run, cd, sudo, put, local, get
 
 env.hosts = ['berkerpeksag.com']
 env.host = env.hosts[0]
@@ -72,6 +72,10 @@ def configure():
 def setup():
     sudo('apt-get update && apt-get upgrade && apt-get install git-core sqlite3 python-sqlite python-setuptools python-pip python-dev build-essential nginx emacs23 curl libcurl3')
     run('pip install virtualenv')
+
+
+def get_db():
+    get('%(root)s%(project_name)s/blog.db' % env, '%(path)s')
 
 
 def put_db():
