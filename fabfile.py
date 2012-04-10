@@ -40,7 +40,7 @@ def static():
     with cd('%(root)s%(project_name)s' % env):
         sudo('rm -r static/')
         run('source bin/activate')
-        sudo('bin/python manage.py collectstatic')
+        sudo('bin/python manage.py collectstatic --noinput')
         restart_nginx()
 
 
