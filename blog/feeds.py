@@ -33,5 +33,8 @@ class LatestEntriesFeed(Feed):
     def item_title(self, item):
         return item.title
 
+    def item_link(self, item):
+        return item.get_absolute_url()
+
     def item_description(self, item):
         return _markdown(item.body)
