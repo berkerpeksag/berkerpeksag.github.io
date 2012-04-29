@@ -1,7 +1,5 @@
 from django.utils.html import strip_spaces_between_tags as short
 
-__all__ = ['SpacelessMiddleware']
-
 
 class SpacelessMiddleware(object):
     def process_response(self, request, response):
