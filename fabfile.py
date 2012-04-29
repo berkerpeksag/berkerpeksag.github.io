@@ -9,6 +9,7 @@ env.root = '/home/wakefield/'
 
 
 def deploy():
+    """Deploy the latest version."""
     with cd('%(root)s%(project_name)s' % env):
         run('git pull')
 
@@ -33,10 +34,12 @@ def restart():
 
 
 def restart_nginx():
+    """Restart the nginx process."""
     sudo('/etc/init.d/nginx restart')
 
 
 def static():
+    """Update static files."""
     with cd('%(root)s%(project_name)s' % env):
         sudo('rm -r static/')
         run('source bin/activate')
@@ -51,6 +54,7 @@ def update_dependencies():
 
 
 def configure():
+    """Configure basic tools."""
     with cd(env.root):
         run('git clone git://github.com/berkerpeksag/berkerpeksag.git')
 
@@ -70,24 +74,29 @@ def configure():
 
 
 def setup():
+    """Setup the VM."""
     sudo('apt-get update && apt-get upgrade && apt-get install git-core sqlite3 python-sqlite python-setuptools python-pip python-dev build-essential nginx emacs23 curl libcurl3')
     run('pip install virtualenv')
 
 
 def get_db():
+    """Get latest database."""
     get('%(root)s%(project_name)s/blog.db' % env, '%(path)s')
 
 
 def put_db():
+    """Upload the database to production."""
     put('blog.db', '%(root)s%(project_name)s/blog.db' % env, use_sudo=True)
 
 
 def delete_db():
+    """Delete the database from production."""
     with cd('%(root)s%(project_name)s' % env):
         run('rm *.db')
 
 
 def clean():
+    """Clean the current setup."""
     stop()
     sudo('unlink /tmp/supervisor.sock')
 
