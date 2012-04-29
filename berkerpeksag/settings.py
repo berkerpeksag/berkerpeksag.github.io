@@ -95,6 +95,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'blog.middleware.SpacelessMiddleware'
 )
 
 ROOT_URLCONF = 'berkerpeksag.urls'
