@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 from django.utils.html import strip_spaces_between_tags as short
 
 __all__ = ['SpacelessMiddleware']
