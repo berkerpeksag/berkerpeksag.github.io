@@ -49,6 +49,8 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
 SECRET_KEY = '!a485o-73611(dw4p@f^-ei+=bq2pelf!5mtz6xdi4ku!bm8wt'
 
 TEMPLATE_LOADERS = (
@@ -62,7 +64,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'blog.middleware.SpacelessMiddleware',
+    'pipeline.middleware.MinifyHTMLMiddleware',
 )
 
 ROOT_URLCONF = 'berkerpeksag.urls'
