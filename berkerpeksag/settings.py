@@ -2,8 +2,7 @@ import os
 
 PROJECT_PATH = os.path.abspath(os.getcwd())
 
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+DEBUG = TEMPLATE_DEBUG = False
 
 ADMINS = (
     ('Berker Peksag', 'berker.peksag+blog@gmail.com'),
@@ -44,12 +43,12 @@ STATICFILES_DIRS = (
     '{:s}/blog/static'.format(PROJECT_PATH),
 )
 
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-
-STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
 SECRET_KEY = '!a485o-73611(dw4p@f^-ei+=bq2pelf!5mtz6xdi4ku!bm8wt'
 
@@ -92,6 +91,7 @@ INSTALLED_APPS = (
     'gunicorn',
     'south',
     'blog',
+    'pipeline',
 )
 
 LOGGING = {
@@ -114,4 +114,19 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+PIPELINE = not DEBUG
+PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CssminCompressor'
+PIPELINE_CSS = {
+    'base': {
+        'source_filenames': (
+          'style/reset.css',
+          'style/screen.css',
+        ),
+        'output_filename': 'style/base.min.css',
+        'extra_context': {
+            'media': 'screen',
+        },
+    },
 }

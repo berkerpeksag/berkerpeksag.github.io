@@ -1,7 +1,6 @@
 from settings import *
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+DEBUG = TEMPLATE_DEBUG = True
 
 DATABASES = {
     'default': {
@@ -13,3 +12,6 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+
+PIPELINE = not DEBUG
+PIPELINE_STORAGE = 'pipeline.storage.PipelineFinderStorage'
