@@ -50,7 +50,7 @@ def static():
 
 def update_dependencies():
     """Update requirements remotely."""
-    run('%(root)s%(project_name)s/bin/pip install -I -r %(root)s/requirements.txt' % env)
+    run('%(root)s%(project_name)s/bin/pip install -I -r %(root)s%(project_name)s/requirements.txt' % env)
 
 
 def configure():
