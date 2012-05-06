@@ -17,14 +17,6 @@ h2 {
     color: #003153; font-size: 25px; margin-bottom: 10px;
 }
 
-h3 {
-    color: #003153; font-size: 21px; margin: 20px 0;
-}
-
-h4 {
-    border-bottom: 1px #ddd solid; color: #2a5e82; font-size: 18px; margin: 20px 0;
-}
-
 header, footer, nav, article, section {
     display: block;
 }
@@ -80,6 +72,12 @@ header .logo {
     article .body {
         font-size: 16px; line-height: 1.5em;
     }
+        article .body h3 {
+            color: #003153; font-size: 21px; margin: 20px 0;
+        }
+        article .body h4 {
+            border-bottom: 1px #ddd solid; color: #2a5e82; font-size: 18px; margin: 20px 0;
+        }
         article .body p {
             color: #333; margin-top: 20px;
         }
