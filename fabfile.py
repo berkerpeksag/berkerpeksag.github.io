@@ -13,6 +13,7 @@ def deploy():
     with cd('%(root)s%(project_name)s' % env):
         run('git pull')
 
+    update_dependencies()
     static()
     restart_nginx()
     restart()
