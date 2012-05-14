@@ -25,7 +25,7 @@ class LatestEntriesFeed(Feed):
         return '/feed/'
 
     def items(self):
-        return Post.objects.order_by('-pub_date')[:5]
+        return Post.objects.filter(status=True, archive=False)[:5]
 
     def item_author_name(self):
         return 'Berker Peksag'
