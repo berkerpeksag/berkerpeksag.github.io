@@ -20,17 +20,17 @@ def deploy():
 
 
 def start():
-    """Start the Gunicorn process"""
+    """Start the Gunicorn process."""
     run('%(root)s%(project_name)s/bin/supervisorctl start gunicorn' % env)
 
 
 def stop():
-    """Stop the Gunicorn process"""
+    """Stop the Gunicorn process."""
     run('%(root)s%(project_name)s/bin/supervisorctl stop gunicorn' % env)
 
 
 def restart():
-    """Restart the Gunicorn process"""
+    """Restart the Gunicorn process."""
     run('%(root)s%(project_name)s/bin/supervisorctl restart gunicorn' % env)
 
 
@@ -107,5 +107,5 @@ def clean():
 
 
 def clean_pyc():
-    """Remove all .pyc files"""
+    """Remove all .pyc files."""
     local('find . -name "*.pyc" -exec rm {} \;')
