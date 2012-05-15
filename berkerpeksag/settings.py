@@ -124,7 +124,7 @@ PIPELINE_CSS = {
           'style/reset.css',
           'style/screen.css',
         ),
-        'output_filename': 'style/base.min.css',
+        'output_filename': 'style/screen.min.css',
         'extra_context': {
             'media': 'screen',
         },
