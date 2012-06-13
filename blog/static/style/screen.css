@@ -66,7 +66,7 @@ header .logo {
 .content article {
     margin-bottom: 60px;
 }
-        article .info .date {
+        article .info time {
             color: #666;
         }
     article .body {
@@ -103,7 +103,7 @@ header .logo {
         .list-archive li a {
             font-size: 16px; margin-right: 5px;
         }
-        .list-archive li .date {
+        .list-archive li time {
             color: #666;
         }
         .list-archive li p.archive {
