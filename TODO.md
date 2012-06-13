@@ -1,6 +1,7 @@
 ### UI
 
 * Create a responsive theme
+* Pygments
 
 ### Settings
 
