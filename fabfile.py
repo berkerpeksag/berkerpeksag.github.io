@@ -19,6 +19,14 @@ def deploy():
     restart()
 
 
+def update_supervisord():
+    """Start Supuervisor daemon."""
+    with cd('%(root)s%(project_name)s' % env):
+        run('git pull')
+        sudo('mv conf/supervisor.conf /etc/supervisord.conf')
+        run('bin/supervisord')
+
+
 def start():
     """Start the Gunicorn process."""
     run('%(root)s%(project_name)s/bin/supervisorctl start gunicorn' % env)
