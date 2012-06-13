@@ -20,7 +20,7 @@ def deploy():
 
 
 def update_supervisord():
-    """Start Supuervisor daemon."""
+    """Update Supervisor configuration."""
     with cd('%(root)s%(project_name)s' % env):
         run('git pull')
         sudo('mv conf/supervisor.conf /etc/supervisord.conf')
