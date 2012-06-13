@@ -112,6 +112,7 @@ def dev():
     local('source bin/activate')
     local('cp berkerpeksag/settings_local.py.dist berkerpeksag/settings_local.py')
     local('bin/python manage.py runserver')
+    get_db()
 
 
 def clean_pyc():
