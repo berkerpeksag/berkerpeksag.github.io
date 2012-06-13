@@ -105,6 +105,14 @@ def clean():
         sudo('rm /etc/nginx/sites-enabled/berkerpeksag.com')
         sudo('rm /etc/supervisord.conf')
 
+def dev():
+    """Configures the development environment."""
+    local('virtualenv .')
+    local('pip install -r requirements.txt')
+    local('source bin/activate')
+    local('cp berkerpeksag/settings_local.py.dist berkerpeksag/settings_local.py')
+    local('bin/python manage.py runserver')
+
 
 def clean_pyc():
     """Remove all .pyc files."""
