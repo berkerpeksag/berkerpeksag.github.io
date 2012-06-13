@@ -6,10 +6,10 @@
 {% if latest_blog_list %}
     {% for blog in latest_blog_list %}
     <article>
-        <div class="info">
+        <header>
             <h2><a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a></h2>
             <time datetime="{{ blog.pub_date|date:'c' }}" pubdate>Posted {{ blog.pub_date|timesince }} ago</time>
-        </div>
+        </header>
 
         <div class="body">
             {{ blog.body|markdown }}

@@ -6,10 +6,10 @@
 {% block content %}
 
 <article>
-    <div class="info">
+    <header>
         <h2>{{ blog.title }}</h2>
         <time datetime="{{ blog.pub_date|date:'c' }}" pubdate>Posted {{ blog.pub_date|timesince }} ago</time>
-    </div>
+    </header>
 
     <div class="body">
         {{ blog.body|markdown }}
