@@ -19,6 +19,12 @@ def deploy():
     restart()
 
 
+def start_supervisord():
+    """Start Supervisor daemon."""
+    with cd('%(root)s%(project_name)s' % env):
+        run('bin/supervisord')
+
+
 def update_supervisord():
     """Update Supervisor configuration."""
     with cd('%(root)s%(project_name)s' % env):
