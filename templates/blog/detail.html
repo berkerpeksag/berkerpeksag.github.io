@@ -21,14 +21,19 @@
 </article>
 
 <script>
-    var titleElm = document.querySelectorAll('article>div.info')[0];
-    var limit = titleElm.offsetTop;
-    window.onscroll = function (evt) { 
-        if (limit < document.documentElement.scrollTop)
-            titleElm.classList.add('float');
-        else
-            titleElm.classList.remove('float');
-    };
+    (function () {
+        "use strict";
+        var titleElm = document.querySelectorAll('article>div.info')[0];
+        if (!titleElm) return;
+
+        var limit = titleElm.offsetTop;
+        window.onscroll = function (evt) { 
+            if (limit < document.documentElement.scrollTop)
+                titleElm.classList.add('float');
+            else
+                titleElm.classList.remove('float');
+        };
+    })();
 </script>
 
 {% endblock content %}
