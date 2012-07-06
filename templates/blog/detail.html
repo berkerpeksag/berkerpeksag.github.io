@@ -28,11 +28,12 @@
             return;
 
         var limit = titleElm.offsetTop;
+        var titleCls = titleElm.classList;
         window.onscroll = function (evt) { 
             if (limit < document.documentElement.scrollTop)
-                titleElm.classList.add('float');
+                titleCls.add('float');
             else
-                titleElm.classList.remove('float');
+                titleCls.remove('float');
         };
     })();
 </script>
