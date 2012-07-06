@@ -20,4 +20,22 @@
     </div>
 </article>
 
+<script>
+    (function () {
+        "use strict";
+        var titleElm = document.querySelectorAll('article>div.info')[0];
+        if (!titleElm)
+            return;
+
+        var limit = titleElm.offsetTop;
+        var titleCls = titleElm.classList;
+        window.onscroll = function (evt) { 
+            if (limit < document.documentElement.scrollTop)
+                titleCls.add('float');
+            else
+                titleCls.remove('float');
+        };
+    })();
+</script>
+
 {% endblock content %}
