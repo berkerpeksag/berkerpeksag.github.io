@@ -2,6 +2,7 @@
 
 * Create a responsive theme
 * Pygments
+* Landing page (i.e. http://rawkes.com/)
 
 ### Settings
 
