@@ -53,8 +53,7 @@ header .logo {
 
 header.float {
     background: none repeat scroll 0 0 #fff;
-    border-radius: 3px/0 0 3px 3px;
-    box-shadow: 0 7px 10px #999;
+    border-bottom: 2px solid #d1e3ef;
     margin: 0 -8px;
     overflow: hidden;
     padding: 8px;
