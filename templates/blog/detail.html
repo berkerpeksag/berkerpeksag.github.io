@@ -24,16 +24,22 @@
     (function () {
         'use strict';
         var titleElm = document.querySelectorAll('article > header')[0];
-        if (!titleElm)
+        var bodyElm = document.querySelectorAll('article > .body')[0];
+        if (!titleElm || !bodyElm)
             return;
 
         var limit = titleElm.offsetTop;
         var titleCls = titleElm.classList;
+        var bodyCls = bodyElm.classList;
         window.onscroll = function (evt) { 
-            if (limit < document.documentElement.scrollTop)
+            if (limit < document.documentElement.scrollTop) {
                 titleCls.add('float');
-            else
+                bodyCls.add('body-padding');
+            }
+            else {
                 titleCls.remove('float');
+                bodyCls.remove('body-padding');
+            }
         };
     })();
 </script>

@@ -51,12 +51,12 @@ header .logo {
     padding-top: 11px;
 }
 
-header.float {
+article > header.float {
     background: none repeat scroll 0 0 #fff;
     border-bottom: 2px solid #d1e3ef;
     margin: 0 -8px;
     overflow: hidden;
-    padding: 8px;
+    padding: 0 8px 6px 8px;
     position: fixed;
     top: 0;
     width: 700px;
@@ -101,6 +101,9 @@ header.float {
             .body ul li {
                 margin-bottom: 10px;
             }
+    article .body-padding {
+        padding-top: 67px;
+    }
     .content article .share {
         margin-top: 25px;
     }
