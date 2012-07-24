@@ -23,8 +23,8 @@
 <script>
     (function () {
         'use strict';
-        var titleElm = document.querySelectorAll('article > header')[0];
-        var bodyElm = document.querySelectorAll('article > .body')[0];
+        var titleElm = document.querySelector('article > header');
+        var bodyElm = document.querySelector('article > .body');
         if (!titleElm || !bodyElm)
             return;
 
