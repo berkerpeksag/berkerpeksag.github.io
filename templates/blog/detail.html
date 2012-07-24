@@ -31,8 +31,10 @@
         var limit = titleElm.offsetTop;
         var titleCls = titleElm.classList;
         var bodyCls = bodyElm.classList;
-        window.onscroll = function (evt) { 
-            if (limit < document.documentElement.scrollTop) {
+        window.onscroll = function (evt) {
+            var scrollTop = Math.max(document.body.scrollTop,
+                    document.documentElement.scrollTop);
+            if (limit < scrollTop) {
                 titleCls.add('float');
                 bodyCls.add('body-padding');
             }
