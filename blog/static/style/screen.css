@@ -22,7 +22,8 @@ header, footer, nav, article, section {
 }
 
 blockquote {
-    background-color: #eaf7ff; border-color: #d1e3ef; border-radius: 10px; border-style: solid; border-width: 1px 1px 1px 5px; margin: 20px 23px 0 23px;
+    background-color: #eaf7ff; border-color: #d1e3ef; border-radius: 10px; border-style: solid;
+    border-width: 1px 1px 1px 5px; margin: 20px 23px 0 23px;
 }
     article .body blockquote p {
         color: #003153; margin-top: 0; padding: 10px 15px;
@@ -33,7 +34,8 @@ code {
 }
 
 pre {
-    background-color: #eaf7ff; border: 1px solid #d1e3ef; border-radius: 10px; color: #003153; margin-top: 20px; overflow-x: auto; padding: 10px 20px;
+    background-color: #eaf7ff; border: 1px solid #d1e3ef; border-radius: 10px; color: #003153; margin-top: 20px;
+    overflow-x: auto; padding: 10px 20px;
 }
     pre code {
         font-size: 15px;
@@ -52,14 +54,8 @@ header .logo {
 }
 
 article > header.float {
-    background: none repeat scroll 0 0 #fff;
-    margin: 0 -8px;
-    overflow: hidden;
-    padding: 0 8px 16px 8px;
-    position: fixed;
-    top: 0;
-    width: 700px;
-    z-index: 999;
+    background: none repeat scroll 0 0 #fff; margin: 0 -8px; overflow: hidden; padding: 0 8px 16px 8px; position: fixed;
+    top: 0; width: 700px; z-index: 999;
 }
 
 .splash {
@@ -124,14 +120,16 @@ article > header.float {
             margin-top: 10px;
         }
         .list-archive li p.archive span {
-            background-color: #eaf7ff; border: 1px groove #d1e3ef; border-radius: 10px; font-size: 12px; padding: 3px 9px; text-shadow: 1px 1px 0 #fff;
+            background-color: #eaf7ff; border: 1px groove #d1e3ef; border-radius: 10px; font-size: 12px;
+            padding: 3px 9px; text-shadow: 1px 1px 0 #fff;
         }
         .list-archive li p.body {
             color: #333; line-height: 21px; margin-top: 8px;
         }
 
 .footnote {
-    border-top: 1px solid #ddd; display: inline-block; font-size: 11px; margin-bottom: 25px; padding-top: 5px; width: 90px;
+    border-top: 1px solid #ddd; display: inline-block; font-size: 11px; margin-bottom: 25px; padding-top: 5px;
+    width: 90px;
 }
     .footnote a {
         color: #888;
