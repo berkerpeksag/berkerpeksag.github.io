@@ -19,18 +19,4 @@
     </ul>
 {% endif %}
 
-<h2>Posts from my old blog</h2>
-{% if archive_old_list %}
-    <ul class="list-archive">
-        {% for blog in archive_old_list %}
-        <li>
-            <p>
-                <a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a>
-                <time datetime="{{ blog.pub_date|date:'c' }}" pubdate>({{ blog.pub_date|timesince }} ago)</time>
-            </p>
-        </li>
-        {% endfor %}
-    </ul>
-{% endif %}
-
 {% endblock content %}
