@@ -46,11 +46,11 @@ pre {
 }
 
 header#main {
-    background-color: #fff; border-bottom: 7px solid #003153; display: block; padding-bottom: 6px; width: 100%;
+    background-color: #fff; border-bottom: 5px solid #003153; display: block; padding-bottom: 8px; width: 100%;
 }
 
-header .logo {
-    padding-top: 11px;
+header#main .logo {
+    padding-top: 13px;
 }
 
 article > header.float {
@@ -59,23 +59,25 @@ article > header.float {
 }
 
 .splash {
-    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; padding: 10px 0;
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; padding: 12px 0;
 }
-
-.splash .welcome {
-    color: #333; font-size: 16px; text-shadow: 1px 1px 0 #fff;
-}
+    .splash .welcome {
+        color: #222; font-size: 18px; line-height: 30px; text-shadow: 1px 1px 0 #fff;
+    }
+        .welcome a {
+            font-weight: bold;
+        }
 
 .content {
-    min-height: 450px; padding: 30px 0;
+    padding: 40px 0 30px 0;
 }
 
 .content article {
     margin-bottom: 60px;
 }
-        article > header time {
-            color: #666;
-        }
+    article > header time {
+        color: #666;
+    }
     article .body {
         font-size: 16px; line-height: 1.5em;
     }
@@ -104,14 +106,20 @@ article > header.float {
         margin-top: 25px;
     }
 
+.content .landing-list {
+}
+    .landing-list li {
+        margin-bottom: 30px;
+    }
+
 .content .list-archive {
-    border-top: 1px solid #ddd; margin: 20px 0 30px 0;
+    margin: 20px 0 30px 0;
 }
     .list-archive li {
-        border-bottom: 1px solid #ddd; font-size: 14px; padding: 10px 0;
+        font-size: 14px; padding: 10px 0;
     }
         .list-archive li a {
-            font-size: 16px; margin-right: 5px;
+            font-size: 18px; margin-right: 5px;
         }
         .list-archive li time {
             color: #666;
@@ -127,49 +135,37 @@ article > header.float {
             color: #333; line-height: 21px; margin-top: 8px;
         }
 
-.footnote {
-    border-top: 1px solid #ddd; display: inline-block; font-size: 11px; margin-bottom: 25px; padding-top: 5px;
-    width: 90px;
-}
-    .footnote a {
-        color: #888;
-    }
-
 .bottom {
     background-color: #dff2ff; border-top: 1px solid #d1e3ef; color: #666; padding: 30px 0;
 }
-    .about h3 {
-        color: #003153; font-size: 20px; margin-left: 72px; text-shadow: 1px 1px 0 #fff;
+    .about {
+        width: 300px;
     }
-    .about p {
-        color: #333; width: 490px; line-height: 22px; margin: 10px 0 0 72px; text-shadow: 1px 1px 0 #fff;
-    }
-    .about a {
-        font-weight: bold;
-    }
-    .about .avatar {
-        border-radius: 5px; float: left; position: relative; top: 13px;
-    }
+        .about h3 {
+            color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
+        }
+        .about p {
+            color: #222; line-height: 22px; margin: 10px 0 0 0; text-shadow: 1px 1px 0 #fff;
+        }
+        .about a {
+            font-weight: bold;
+        }
     .github-badge {
         float: right; padding-top: 37px;
     }
 
 footer {
-    background-color: #003153; color: #5989ae; padding: 15px 0;
+    border-top: 5px solid #003153; padding: 15px 0;
 }
 
-footer .mid-footer {
-    background-color: #eaf7ff; border-top: 1px solid #e1edf5; color: #666; padding: 20px 0;
-}
+    footer nav ul {
+        float: right;
+    }
 
-footer nav ul {
-    float: right;
-}
+    footer nav ul li {
+        float: left; padding-left: 25px;
+    }
 
-footer nav ul li {
-    float: left; padding-left: 25px;
-}
-
-footer nav ul li a {
-    color: #8ba8aa;
-}
+    footer nav ul li a {
+        color: #666;
+    }

@@ -4,22 +4,16 @@
 {% block content %}
 
 {% if latest_blog_list %}
+    <ul class="landing-list">
     {% for blog in latest_blog_list %}
-    <article>
+    <li>
         <header>
             <h2><a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a></h2>
             <time datetime="{{ blog.pub_date|date:'c' }}" pubdate>Posted {{ blog.pub_date|timesince }} ago</time>
         </header>
-
-        <div class="body">
-            {{ blog.body|markdown }}
-        </div>
-
-        <div class="share">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="{{ blog.title }}" data-url="http://berkerpeksag.com/{{ blog.slug }}/" data-via="berkerpeksag">Tweet</a>
-        </div>
-    </article>
+    </li>
     {% endfor %}
+    </ul>
 {% endif %}
 
 {% endblock content %}
