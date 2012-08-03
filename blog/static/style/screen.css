@@ -59,7 +59,7 @@ article > header.float {
 }
 
 .splash {
-    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; padding: 12px 0;
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; padding: 10px 0;
 }
     .splash .welcome {
         color: #222; font-size: 18px; line-height: 30px; text-shadow: 1px 1px 0 #fff;
