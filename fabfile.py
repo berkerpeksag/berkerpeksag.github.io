@@ -1,4 +1,4 @@
-from fabric.api import env, run, cd, sudo, put, local, get
+from fabric.api import cd, env, get, local, put, run, sudo
 
 env.hosts = ['berkerpeksag.com']
 env.host = env.hosts[0]
@@ -122,11 +122,9 @@ def clean():
 def dev():
     """Configures the development environment."""
     local('virtualenv .')
-    local('pip install -r requirements.txt')
-    local('source bin/activate')
+    local('bin/pip install -r requirements.txt')
     local('cp berkerpeksag/settings_local.py.dist berkerpeksag/settings_local.py')
-    local('bin/python manage.py runserver')
-    get_db()
+    local('bin/python manage.py syncdb')
 
 
 def clean_pyc():
