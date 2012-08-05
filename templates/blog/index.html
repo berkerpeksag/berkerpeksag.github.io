@@ -11,6 +11,7 @@
             <h2><a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a></h2>
             <time datetime="{{ blog.pub_date|date:'c' }}" pubdate>Posted {{ blog.pub_date|timesince }} ago</time>
         </header>
+        <hr>
     </li>
     {% endfor %}
     </ul>
