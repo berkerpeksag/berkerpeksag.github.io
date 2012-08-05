@@ -16,8 +16,8 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
     body = models.TextField()
-    pub_date = models.DateTimeField(default=datetime.now())
-    update_date = models.DateTimeField(default=datetime.now())
+    pub_date = models.DateTimeField()
+    update_date = models.DateTimeField()
 
     class Meta:
         ordering = ['-pub_date']
@@ -28,6 +28,12 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return '/{:s}/'.format(self.slug)
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.pub_date = datetime.now()
+        self.update_date = datetime.now()
+        super(Post, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return self.title
