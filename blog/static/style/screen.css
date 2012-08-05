@@ -42,15 +42,15 @@ pre {
     }
 
 .container {
-    margin: 0 auto; width: 650px;
+    margin: 0 auto; width: 600px;
 }
 
 header#main {
-    background-color: #fff; border-bottom: 5px solid #003153; display: block; padding-bottom: 8px; width: 100%;
+    background-color: #fff; border-bottom: 5px solid #003153; display: block; padding-bottom: 10px; width: 100%;
 }
 
 header#main .logo {
-    padding-top: 13px;
+    padding-top: 15px; text-align: center;
 }
 
 article > header.float {
@@ -61,11 +61,11 @@ article > header.float {
 .splash {
     background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; display: block; padding: 10px 0;
 }
-    .splash .welcome {
-        color: #222; font-size: 18px; line-height: 30px; text-shadow: 1px 1px 0 #fff;
+    .splash .welcome p {
+        color: #222; font-size: 18px; line-height: 35px; text-align: center; text-shadow: 1px 1px 0 #fff;
     }
         .welcome a {
-            font-weight: bold;
+            background-color: #d1e3ef; border-radius: 7px; font-weight: bold; padding: 3px 6px;
         }
 
 .content {
