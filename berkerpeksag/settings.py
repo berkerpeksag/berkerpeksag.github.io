@@ -81,7 +81,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'blog.context_processors.debug_mode',
 )
 
-INSTALLED_APPS = (
+CORE_APPS = (
     'django.contrib.auth',
     'django.contrib.sessions',
     'django.contrib.contenttypes',
@@ -89,11 +89,19 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.markup',
     'django.contrib.sites',
+)
+
+EXTERNAL_APPS = (
     'gunicorn',
     'south',
-    'blog',
     'pipeline',
 )
+
+INTERNAL_APPS = (
+    'blog',
+)
+
+INSTALLED_APPS = CORE_APPS + EXTERNAL_APPS + INTERNAL_APPS
 
 LOGGING = {
     'version': 1,
