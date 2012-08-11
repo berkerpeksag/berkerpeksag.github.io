@@ -79,7 +79,7 @@ article > header.float {
 .content article {
     margin-bottom: 60px;
 }
-    article header, ul.landing-list li header {
+    article header {
         text-align: center;
     }
         article header time {
@@ -111,12 +111,6 @@ article > header.float {
     }
     .content article .share {
         margin-top: 25px;
-    }
-
-.content .landing-list {
-}
-    .landing-list li {
-        margin-bottom: 30px;
     }
 
 .content .list-archive {

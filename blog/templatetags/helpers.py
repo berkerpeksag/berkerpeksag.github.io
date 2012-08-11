@@ -1,4 +1,5 @@
 from django import template
+from django.template.defaultfilters import stringfilter
 
 register = template.Library()
 
@@ -7,4 +8,11 @@ register = template.Library()
 def active(request, pattern):
     if request.path.startswith(pattern):
         return ' class="active"'
+    return ''
+
+
+@register.simple_tag
+def script(request, source, pattern):
+    if not request.path.startswith(pattern):
+        return '<script src="{:s}"></script>'.format(source)
     return ''

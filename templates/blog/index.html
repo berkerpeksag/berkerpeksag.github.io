@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 {% load markup %}
+{% load filters %}
 
 {% block content %}
 
 {% if latest_blog_list %}
-    <ul class="landing-list">
     {% for blog in latest_blog_list %}
-    <li>
+    <article>
         <header>
             <h2><a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a></h2>
             <time datetime="{{ blog.pub_date|date:'c' }}" pubdate>Posted {{ blog.pub_date|timesince }} ago</time>
         </header>
+        <div class="body">
+            {{ blog.body|splitfirst|markdown }}
+        </div>
         <hr>
-    </li>
+    </article>
     {% endfor %}
-    </ul>
 {% endif %}
 
 {% endblock content %}
