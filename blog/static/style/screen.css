@@ -91,7 +91,7 @@ article > header.float {
             border-bottom: 1px #ddd solid; color: #2a5e82; font-size: 18px; margin: 20px 0;
         }
         article .body p {
-            color: #333; margin-top: 20px;
+            color: #333; margin-top: 30px;
         }
         article .body p a {
             font-weight: bold;
@@ -110,7 +110,7 @@ article > header.float {
     }
 
 .content .list-archive {
-    margin: 20px 0 30px 0;
+    margin: 20px 0 60px 0;
 }
     .list-archive li {
         font-size: 14px; padding: 10px 0;
