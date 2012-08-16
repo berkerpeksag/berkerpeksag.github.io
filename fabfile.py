@@ -127,6 +127,11 @@ def dev():
     local('bin/python manage.py syncdb')
 
 
+def server():
+    """Starts development server."""
+    local('python manage.py runserver')
+
+
 def clean_pyc():
     """Remove all .pyc files."""
     local('find . -name "*.pyc" -exec rm {} \;')
