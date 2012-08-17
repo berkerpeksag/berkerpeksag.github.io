@@ -17,8 +17,8 @@ h2 {
     color: #003153; font-size: 25px; margin-bottom: 10px;
 }
 
-header, footer, nav, article, section {
-    display: block;
+p {
+    line-height: 23px;
 }
 
 blockquote {
@@ -46,11 +46,7 @@ pre {
 }
 
 header#main {
-    background-color: #fff; border-bottom: 6px solid #003153; display: block; padding-bottom: 12px; width: 100%;
-}
-
-header#main .logo {
-    padding-top: 17px; text-align: center;
+    background-color: #fff; border-bottom: 6px solid #003153; display: block; padding: 17px 0 12px 0; text-align: center;
 }
 
 .content {
@@ -63,7 +59,8 @@ article {
     article header {
         text-align: center;
     }
-        article header time {
+        article header time,
+        .list-archive li time {
             color: #666;
         }
     article header.float {
@@ -71,7 +68,7 @@ article {
         padding: 0 8px 16px 8px; position: fixed; top: 0; width: 600px; z-index: 999;
     }
     article .body {
-        font-size: 16px; line-height: 1.5em;
+
     }
         .body h3 {
             color: #003153; font-size: 21px; margin: 20px 0;
@@ -80,7 +77,7 @@ article {
             border-bottom: 1px #ddd solid; color: #2a5e82; font-size: 18px; margin: 20px 0;
         }
         .body p {
-            color: #333; margin-top: 25px;
+            color: #333; font-size: 16px; line-height: 1.5em; margin-top: 25px;
         }
         .body p a {
             font-weight: bold;
@@ -107,22 +104,9 @@ article {
         .list-archive li a {
             font-size: 18px; margin-right: 5px;
         }
-        .list-archive li time {
-            color: #666;
-        }
-        .list-archive li p.archive {
-            margin-top: 10px;
-        }
-        .list-archive li p.archive span {
-            background-color: #eaf7ff; border: 1px groove #d1e3ef; border-radius: 10px; font-size: 12px;
-            padding: 3px 9px; text-shadow: 1px 1px 0 #fff;
-        }
-        .list-archive li p.body {
-            color: #333; line-height: 21px; margin-top: 8px;
-        }
 
 .bottom {
-    background-color: #dff2ff; color: #666; padding: 30px 0;
+    background-color: #dff2ff; border-bottom: 5px solid #003153; color: #666; padding: 30px 0;
 }
     .about {
         width: 350px;
@@ -131,7 +115,7 @@ article {
             color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
         }
         .about p {
-            color: #222; line-height: 23px; margin: 10px 0 0 0; text-shadow: 1px 1px 0 #fff;
+            color: #222; margin: 10px 0 0 0; text-shadow: 1px 1px 0 #fff;
         }
         .about a {
             font-weight: bold;
@@ -141,17 +125,14 @@ article {
     }
 
 footer {
-    border-top: 5px solid #003153; padding: 15px 0;
+    padding: 15px 0;
 }
-
     footer nav ul {
         float: right;
     }
-
     footer nav ul li {
         float: left; padding-left: 25px;
     }
-
     footer nav ul li a {
         color: #666;
     }
