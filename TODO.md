@@ -3,11 +3,6 @@
 * Pygments
 * Markdown CSS
 
-### Cleanup
-
-* Whitespaces
-* line-height
-
 ### Validators
 
 * HTML5
