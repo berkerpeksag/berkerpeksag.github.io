@@ -109,7 +109,7 @@ article {
     background-color: #dff2ff; border-bottom: 5px solid #003153; color: #666; padding: 30px 0;
 }
     .about {
-        width: 350px;
+        width: 300px;
     }
         .about h3 {
             color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
@@ -121,7 +121,7 @@ article {
             font-weight: bold;
         }
     .github-badge {
-        float: right; padding-top: 37px;
+        float: right; padding-top: 9px;
     }
 
 footer {
