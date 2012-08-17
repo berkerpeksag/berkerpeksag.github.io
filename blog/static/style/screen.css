@@ -2,6 +2,10 @@ body {
     color: #434343; font: normal 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+article, footer, h1, h2, h3, h4, h5, h6, header, nav, ul, p {
+    margin: 0;
+}
+
 a {
     color: #003153; text-decoration: none;
 }
@@ -96,7 +100,7 @@ article {
     }
 
 .content .list-archive {
-    margin: 20px 0 60px 0;
+    margin: 20px 0 60px 0; padding-left: 0;
 }
     .list-archive li {
         font-size: 14px; padding: 10px 0;
