@@ -140,9 +140,9 @@ footer {
     footer nav ul {
         float: right;
     }
-    footer nav ul li {
-        float: left; padding-left: 25px;
-    }
-    footer nav ul li a {
-        color: #666;
-    }
+        footer nav ul li {
+            float: left; padding-left: 25px;
+        }
+            footer nav ul li a {
+                color: #666;
+            }
