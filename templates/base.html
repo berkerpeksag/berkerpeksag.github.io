@@ -1,4 +1,3 @@
-{% load helpers %}
 {% load compressed %}
 <!DOCTYPE html>
 <html lang="en">
@@ -71,6 +70,6 @@
         </p>
     </footer>
 
-    {% script request "//platform.twitter.com/widgets.js" "/archive" %}
+    {% block script %}{% endblock %}
 </body>
 </html>
