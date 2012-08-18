@@ -50,11 +50,17 @@ pre {
 }
 
 header#main {
-    background-color: #fff; border-bottom: 6px solid #003153; display: block; padding: 17px 0 12px 0; text-align: center;
+
 }
+    header#main h1 {
+        border-left: 30px solid #003153; margin: 0; padding-left: 10px;
+    }
+        header#main h1 a {
+            color: #5b5b5b; font-size: 18px;
+        }
 
 .content {
-    border-top: 20px solid #dff2ff; min-height: 500px; padding-top: 60px;
+    min-height: 500px; padding-top: 60px;
 }
 
 article {
