@@ -50,13 +50,16 @@ pre {
 }
 
 header#main {
-
+    margin-bottom: 20px;
 }
     header#main h1 {
-        border-left: 30px solid #003153; margin: 0; padding-left: 10px;
+        border-left: 25px solid #003153; line-height: 24px; margin: 0; padding-left: 7px;
     }
         header#main h1 a {
-            color: #5b5b5b; font-size: 18px;
+            color: #5b5b5b; font-size: 18px; line-height: 18px;
+        }
+        header#main h1 a:hover {
+            color: #003153; text-decoration: none;
         }
 
 .content {
