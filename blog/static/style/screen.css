@@ -53,13 +53,13 @@ header#main {
     margin-bottom: 20px;
 }
     header#main h1 {
-        border-left: 25px solid #003153; line-height: 24px; margin: 0; padding-left: 7px;
+        border-left: 20px solid #003153; line-height: 24px; margin: 0; padding-left: 7px;
     }
         header#main h1 a {
-            color: #5b5b5b; font-size: 18px; line-height: 18px;
+            color: #434343; font-size: 18px; font-weight: normal; line-height: 18px;
         }
         header#main h1 a:hover {
-            color: #003153; text-decoration: none;
+            text-decoration: none;
         }
 
 .content {
