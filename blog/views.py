@@ -4,11 +4,9 @@ from django.template import RequestContext
 
 
 def index(request):
-    latest_blog_list = Post.objects.filter(status=True, archive=False)[1:5]
-    latest_blog = Post.objects.filter(status=True, archive=False)[:1]
+    latest_blog_list = Post.objects.filter(status=True, archive=False)[:5]
     return render_to_response('blog/index.html',
-                              {'latest_blog': latest_blog,
-                               'latest_blog_list': latest_blog_list},
+                              {'latest_blog_list': latest_blog_list},
                               context_instance=RequestContext(request))
 
 

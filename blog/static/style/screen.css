@@ -50,23 +50,18 @@ pre {
 }
 
 header#main {
-    padding-top: 25px;
+    background-color: #dff2ff; margin-top: 0;
 }
     header#main a h1 {
-        color: #434343; font-size: 12px; font-weight: normal; line-height: 12px;
-        border-left: 20px solid #003153; margin: 0; padding: 1px 0 0 7px; text-transform: uppercase;
+        background-color: #fff; color: #434343; font-size: 12px; font-weight: normal; line-height: 12px;
+        border-left: 20px solid #003153; margin: 0; padding: 5px 0 3px 7px; text-transform: uppercase; width: 175px;
     }
     header#main a:hover {
         text-decoration: none;
     }
 
-#splash {
-    background-color: #dff2ff; border-bottom: 2px solid #d1e3ef; border-top: 2px solid #d1e3ef; margin-bottom: 50px;
-    padding-top: 40px;
-}
-
 .content {
-    min-height: 500px; padding-top: 50px;
+    min-height: 500px; padding-top: 60px;
 }
 
 article {
