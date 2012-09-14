@@ -1,7 +1,6 @@
 from blog.helpers import render
 from blog.models import Post
-from django.shortcuts import get_object_or_404, render_to_response
-from django.template import RequestContext
+from django.shortcuts import get_object_or_404
 
 
 def index(request):
