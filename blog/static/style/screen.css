@@ -50,15 +50,18 @@ pre {
 }
 
 header#main {
-    background-color: #dff2ff;
+    background-color: #fff; border-bottom: 7px solid #003153; padding: 11px 0 6px 0;
 }
-    header#main a h1 {
-        background-color: #fff; color: #434343; font-size: 12px; font-weight: normal; line-height: 12px;
-        border-left: 20px solid #003153; margin: 0; padding: 5px 0 3px 7px; text-transform: uppercase; width: 175px;
+
+.splash {
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; padding: 10px 0;
+}
+    .splash p {
+        color: #333; font-size: 16px; text-shadow: 1px 1px 0 #fff;
     }
-    header#main a:hover {
-        text-decoration: none;
-    }
+        .splash p a {
+            font-weight: bold;
+        }
 
 .content {
     min-height: 500px; padding-top: 60px;
@@ -117,7 +120,7 @@ article {
         }
 
 .bottom {
-    background-color: #dff2ff; border-bottom: 5px solid #003153; padding: 30px 0;
+    background-color: #dff2ff; border-bottom: 7px solid #003153; padding: 30px 0;
 }
     .about {
         width: 300px;
