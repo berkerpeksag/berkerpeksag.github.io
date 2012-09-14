@@ -5,8 +5,8 @@
 {% block content %}
 
 <div class="container">
-{% if latest_blog_list %}
-    {% for blog in latest_blog_list %}
+{% if blogs %}
+    {% for blog in blogs %}
     <article>
         <header>
             <h2><a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a></h2>

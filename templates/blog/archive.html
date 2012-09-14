@@ -6,9 +6,9 @@
 {% block content %}
 
 <h2>Archive</h2>
-{% if archive_list %}
+{% if archive %}
     <ul class="list-archive">
-        {% for blog in archive_list %}
+        {% for blog in archive %}
         <li>
             <p>
                 <a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a>

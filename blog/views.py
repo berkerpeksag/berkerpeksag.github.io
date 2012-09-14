@@ -5,8 +5,8 @@ from django.template import RequestContext
 
 
 def index(request):
-    latest_blog_list = Post.objects.filter(status=True, archive=False)[:5]
-    return render('blog/index', {'latest_blog_list': latest_blog_list}, request)
+    blogs = Post.objects.filter(status=True, archive=False)[:5]
+    return render('blog/index', {'blogs': blogs}, request)
 
 
 def detail(request, slug):
@@ -15,5 +15,6 @@ def detail(request, slug):
 
 
 def archive(request):
-    archive_list = Post.objects.filter(status=True, archive=False).values('slug', 'title', 'pub_date')
-    return render('blog/archive', {'archive_list': archive_list}, request)
+    archive = Post.objects.filter(status=True,
+        archive=False).values('slug', 'title', 'pub_date')
+    return render('blog/archive', {'archive': archive}, request)
