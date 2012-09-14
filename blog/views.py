@@ -17,7 +17,7 @@ def detail(request, slug):
 
 
 def archive(request):
-    archive_list = Post.objects.filter(status=True, archive=False)
+    archive_list = Post.objects.filter(status=True, archive=False).values('slug', 'title', 'pub_date')
     return render_to_response('blog/archive.html',
                               {'archive_list': archive_list},
                               context_instance=RequestContext(request))
