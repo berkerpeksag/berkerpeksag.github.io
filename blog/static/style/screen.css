@@ -50,14 +50,14 @@ pre {
 }
 
 header#main {
-    background-color: #fff; border-bottom: 7px solid #003153; padding: 11px 0 6px 0;
+    background-color: #fff; border-bottom: 7px solid #003153; padding: 15px 0 10px 0;
 }
 
 .splash {
-    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; padding: 10px 0;
+    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; padding: 13px 0;
 }
     .splash p {
-        color: #333; font-size: 16px; text-shadow: 1px 1px 0 #fff;
+        color: #333; font-size: 18px; text-shadow: 1px 1px 0 #fff;
     }
         .splash p a {
             font-weight: bold;
@@ -105,7 +105,7 @@ article {
     article .body-padding {
         padding-top: 64px;
     }
-    .content article .share {
+    article .share {
         margin-top: 25px;
     }
 
