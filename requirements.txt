@@ -8,3 +8,4 @@ gunicorn==0.13.4
 supervisor==3.0a10
 django-debug-toolbar==0.9.4
 Pygments==1.5
+pygments-style-github==0.4
