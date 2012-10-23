@@ -13,5 +13,6 @@ DATABASES = {
     }
 }
 
+# Pipeline
 PIPELINE = not DEBUG
 PIPELINE_STORAGE = 'pipeline.storage.PipelineFinderStorage'
