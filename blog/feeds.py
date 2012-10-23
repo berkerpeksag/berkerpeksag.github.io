@@ -7,7 +7,7 @@ import markdown
 
 
 def _markdown(value):
-    return mark_safe(markdown.markdown(value))
+    return mark_safe(markdown.markdown(value, ['codehilite']))
 
 
 class LatestEntriesFeed(Feed):
