@@ -9,6 +9,6 @@ local
 *.db
 *.sql
 *~
-static/
+.static/
 doc/
 berkerpeksag/settings_local.py
