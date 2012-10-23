@@ -67,6 +67,11 @@ def update_dependencies():
     run('%(root)s%(project_name)s/bin/pip install -r %(root)s%(project_name)s/requirements.txt' % env)
 
 
+def update_local_deps():
+    """Update requirements remotely."""
+    local('pip install -r requirements.txt')
+
+
 def configure():
     """Configure basic tools."""
     with cd(env.root):
