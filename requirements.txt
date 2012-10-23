@@ -6,3 +6,4 @@ cssmin==0.1.4
 django-pipeline==1.2.5
 gunicorn==0.13.4
 supervisor==3.0a10
+django-debug-toolbar==0.9.4
