@@ -63,7 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'pipeline.middleware.MinifyHTMLMiddleware',
+    #'pipeline.middleware.MinifyHTMLMiddleware',
 )
 
 ROOT_URLCONF = 'berkerpeksag.urls'
@@ -132,6 +132,8 @@ PIPELINE_CSS = {
         'source_filenames': (
           'style/reset.css',
           'style/screen.css',
+          'style/pygments.css',
+          'style/markdown.css',
         ),
         'output_filename': 'style/screen.min.css',
         'extra_context': {

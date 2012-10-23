@@ -37,14 +37,6 @@ code {
     font-family: Consolas, Monaco, 'Andale Mono', monospace, serif; line-height: 1.5em;
 }
 
-pre {
-    background-color: #eaf7ff; border: 1px solid #d1e3ef; border-radius: 10px; color: #003153; margin-top: 20px;
-    overflow-x: auto; padding: 10px 20px;
-}
-    pre code {
-        font-size: 15px;
-    }
-
 .container {
     margin: 0 auto; width: 600px;
 }
