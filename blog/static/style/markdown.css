@@ -14,14 +14,25 @@ h4 {
     border-bottom: 1px #ddd solid; color: #2a5e82; font-size: 20px; margin: 30px 0;
 }
 
+blockquote {
+    border-left: 4px solid #ddd; color: #777; margin: 30px 0; padding: 0 15px;
+}
+    blockquote > :first-child {
+        margin-top: 0;
+    }
+    blockquote > :last-child {
+        margin-bottom: 0;
+    }
+
 code {
-    background-color: #ddd; font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;
+    background-color: #f8f8f8; border: 1px solid #eaeaea; border-radius: 3px; margin: 0 2px; padding: 0 5px;
+    white-space: nowrap;
 }
 
 .codehilite {
     margin: 30px 0;
 }
     .codehilite pre {
-        border-radius: 3px;
-            background-color: #F8F8F8; border: 1px solid #CCCCCC; overflow-x: auto; margin: 0; padding: 15px 15px;
+        background-color: #f8f8f8; border: 1px solid #ccc; border-radius: 3px; margin: 0; overflow-x: auto;
+        padding: 15px 15px;
     }

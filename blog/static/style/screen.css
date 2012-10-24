@@ -7,7 +7,7 @@ article, footer, h1, h2, h3, h4, h5, h6, header, nav, ul, p {
 }
 
 a {
-    color: #003153; text-decoration: none;
+    color: #003153; font-weight: bold; text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
@@ -31,9 +31,6 @@ header#main {
     .splash p {
         color: #333; font-size: 18px; text-shadow: 1px 1px 0 #fff;
     }
-        .splash p a {
-            font-weight: bold;
-        }
 
 .content {
     min-height: 500px; padding-top: 50px;
@@ -53,19 +50,16 @@ article {
         background: none repeat scroll 0 0 #fff; margin: 0 -8px; overflow: hidden;
         padding: 0 8px 16px 8px; position: fixed; top: 0; width: 600px; z-index: 999;
     }
-    article .body {
+    article > .body {
 
     }
-        .body p {
+        .body > p {
             color: #333; line-height: 1.5em; margin-top: 25px;
         }
-        .body p a {
-            font-weight: bold;
-        }
-        .body ul {
+        .body > ul {
             display: block; line-height: 1.5em; list-style: inside square; margin: 20px 0 0 25px;
         }
-            .body ul li {
+            .body > ul > li {
                 color: #333; margin-bottom: 20px;
             }
     article .body-padding {
@@ -74,16 +68,6 @@ article {
     article .share {
         margin-top: 50px;
     }
-
-.content .list-archive {
-    margin: 20px 0 60px 0; padding-left: 0;
-}
-    .list-archive li {
-        font-size: 14px; padding: 10px 0;
-    }
-        .list-archive li a {
-            font-size: 18px; margin-right: 5px;
-        }
 
 .bottom {
     background-color: #dff2ff; border-bottom: 7px solid #003153; border-top: 1px solid #d1e3ef; padding: 30px 0;
@@ -97,9 +81,6 @@ article {
         .about p {
             color: #222; line-height: 1.5em; margin-top: 20px; text-shadow: 1px 1px 0 #fff;
         }
-        .about a {
-            font-weight: bold;
-        }
     .github-badge {
         float: right; padding-top: 9px;
     }
@@ -111,5 +92,5 @@ footer {
         float: left; padding-right: 25px;
     }
         footer nav ul li a {
-            color: #666;
+            color: #666; font-weight: normal;
         }
