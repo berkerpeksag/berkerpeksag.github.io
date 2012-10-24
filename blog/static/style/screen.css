@@ -1,5 +1,5 @@
 body {
-    color: #434343; font: normal 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #434343; font: normal 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 article, footer, h1, h2, h3, h4, h5, h6, header, nav, ul, p {
@@ -13,28 +13,8 @@ a:hover {
     text-decoration: underline;
 }
 
-ul {
-    list-style-type: none;
-}
-
-h2 {
-    color: #003153; font-size: 25px; margin-bottom: 10px;
-}
-
 p {
     line-height: 23px;
-}
-
-blockquote {
-    background-color: #eaf7ff; border-color: #d1e3ef; border-radius: 10px; border-style: solid;
-    border-width: 1px 1px 1px 5px; margin: 20px 23px 0 23px;
-}
-    article .body blockquote p {
-        color: #003153; margin-top: 0; padding: 10px 15px;
-    }
-
-code {
-    font-family: Consolas, Monaco, 'Andale Mono', monospace, serif; line-height: 1.5em;
 }
 
 .container {
@@ -56,7 +36,7 @@ header#main {
         }
 
 .content {
-    min-height: 500px; padding-top: 60px;
+    min-height: 500px; padding-top: 50px;
 }
 
 article {
@@ -76,29 +56,23 @@ article {
     article .body {
 
     }
-        .body h3 {
-            color: #003153; font-size: 21px; margin: 20px 0;
-        }
-        .body h4 {
-            border-bottom: 1px #ddd solid; color: #2a5e82; font-size: 18px; margin: 20px 0;
-        }
         .body p {
-            color: #333; font-size: 16px; line-height: 1.5em; margin-top: 25px;
+            color: #333; line-height: 1.5em; margin-top: 25px;
         }
         .body p a {
             font-weight: bold;
         }
         .body ul {
-            display: block; list-style: inside square; margin: 20px 0 0 25px;
+            display: block; line-height: 1.5em; list-style: inside square; margin: 20px 0 0 25px;
         }
             .body ul li {
-                margin-bottom: 10px;
+                color: #333; margin-bottom: 20px;
             }
     article .body-padding {
         padding-top: 64px;
     }
     article .share {
-        margin-top: 25px;
+        margin-top: 50px;
     }
 
 .content .list-archive {
@@ -115,13 +89,13 @@ article {
     background-color: #dff2ff; border-bottom: 7px solid #003153; border-top: 1px solid #d1e3ef; padding: 30px 0;
 }
     .about {
-        width: 300px;
+        width: 350px;
     }
         .about h3 {
-            color: #003153; font-size: 20px; text-shadow: 1px 1px 0 #fff;
+            color: #003153; font-size: 22px; margin: 0; text-shadow: 1px 1px 0 #fff;
         }
         .about p {
-            color: #222; margin-top: 10px; text-shadow: 1px 1px 0 #fff;
+            color: #222; line-height: 1.5em; margin-top: 20px; text-shadow: 1px 1px 0 #fff;
         }
         .about a {
             font-weight: bold;
@@ -131,14 +105,11 @@ article {
     }
 
 footer {
-    padding: 15px 0;
+    padding-top: 20px; height: 36px;
 }
-    footer nav ul {
-        float: right;
+    footer nav ul li {
+        float: left; padding-right: 25px;
     }
-        footer nav ul li {
-            float: left; padding-left: 25px;
+        footer nav ul li a {
+            color: #666;
         }
-            footer nav ul li a {
-                color: #666;
-            }
