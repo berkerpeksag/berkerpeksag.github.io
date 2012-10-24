@@ -18,6 +18,6 @@ def detail(request, slug):
 
 @render('blog/archive')
 def archive(request):
-    archive = Post.objects.filter(status=True,
-        archive=False).values('slug', 'title', 'pub_date')
-    return {'archive': archive}
+    blogs = Post.objects.filter(status=True,
+        archive=False).values('slug', 'title', 'pub_date', 'body')
+    return {'blogs': blogs}
