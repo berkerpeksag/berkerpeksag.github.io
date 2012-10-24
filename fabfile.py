@@ -132,9 +132,9 @@ def dev():
     local('bin/python manage.py syncdb')
 
 
-def server():
+def server(port='8000'):
     """Starts development server."""
-    local('python manage.py runserver')
+    local('python manage.py runserver %s' % port)
 
 
 def clean_pyc():
