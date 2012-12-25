@@ -94,7 +94,9 @@ def configure():
 
 def setup():
     """Setup the VM."""
-    sudo('apt-get update && apt-get upgrade && apt-get install git-core sqlite3 python-sqlite python-setuptools python-pip python-dev build-essential nginx emacs23 curl libcurl3')
+    sudo('apt-get update && apt-get upgrade && apt-get install git-core sqlite3 '
+         'python-sqlite python-setuptools python-pip python-dev build-essential '
+         'nginx emacs23 curl libcurl3')
     run('pip install virtualenv')
 
 
