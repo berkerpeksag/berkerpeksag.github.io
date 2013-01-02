@@ -2,13 +2,13 @@ from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 
+LANGUAGES = (
+    (u'tr', u'Turkish'),
+    (u'en', u'English'),
+)
+
 
 class Post(models.Model):
-    LANGUAGES = (
-        (u'tr', u'Turkish'),
-        (u'en', u'English'),
-    )
-
     author = models.ForeignKey(User)
     status = models.BooleanField('Active', default=False)
     archive = models.BooleanField(default=False)
