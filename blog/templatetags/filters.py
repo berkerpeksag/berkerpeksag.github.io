@@ -7,4 +7,4 @@ register = template.Library()
 @register.filter
 @stringfilter
 def splitfirst(string):
-    return string.split()[0]
+    return string.splitlines()[0]
