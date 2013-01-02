@@ -9,6 +9,8 @@ LANGUAGES = (
 
 
 class Post(models.Model):
+    """Base model for blog posts."""
+
     author = models.ForeignKey(User)
     status = models.BooleanField('Active', default=False)
     archive = models.BooleanField(default=False)
