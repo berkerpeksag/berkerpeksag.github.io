@@ -51,7 +51,7 @@ class DataImporter(object):
 
 
 config = {'host': 'www.berkerpeksag.com', 'db': 'dbberkerpeksag',
-          'user': 'root', 'passwd': 'berker88',
+          'user': '', 'passwd': '',
           'use_unicode': True, 'charset': 'utf8'}
 
 importer = DataImporter(**config)
