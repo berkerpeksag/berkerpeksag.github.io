@@ -1,5 +1,5 @@
 body {
-    color: #434343; font: normal 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #434343; font: normal 16px 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0 auto; width: 600px;
 }
 
 article, footer, h1, h2, h3, h4, h5, h6, header, nav, ul, p {
@@ -17,20 +17,9 @@ p {
     line-height: 23px;
 }
 
-.container {
-    margin: 0 auto; width: 600px;
-}
-
 header#main {
-    background-color: #fff; border-bottom: 7px solid #003153; padding: 15px 0 10px 0;
+    border-bottom: 5px solid #003153; padding: 35px 0 10px 0;
 }
-
-.splash {
-    background-color: #dff2ff; border-bottom: 1px solid #d1e3ef; padding: 13px 0;
-}
-    .splash p {
-        color: #333; font-size: 18px; text-shadow: 1px 1px 0 #fff;
-    }
 
 .content {
     min-height: 500px; padding-top: 50px;
@@ -70,7 +59,7 @@ article {
     }
 
 .bottom {
-    background-color: #dff2ff; border-bottom: 7px solid #003153; border-top: 1px solid #d1e3ef; padding: 30px 0;
+    /*background-color: #dff2ff;*/ border-bottom: 5px solid #003153; /*border-top: 1px solid #d1e3ef;*/ padding: 30px 0;
 }
     .about {
         width: 350px;
@@ -86,7 +75,7 @@ article {
     }
 
 footer {
-    padding-top: 20px; height: 36px;
+    padding-top: 20px; height: 75px;
 }
     footer nav ul li {
         float: left; padding-right: 25px;
