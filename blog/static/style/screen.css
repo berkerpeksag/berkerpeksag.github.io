@@ -1,5 +1,5 @@
 body {
-    color: #434343; font: normal 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #dff2ff; color: #434343; font: normal 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 article, footer, h1, h2, h3, h4, h5, h6, header, nav, ul, p {
@@ -18,28 +18,26 @@ p {
 }
 
 .container {
-    margin: 0 auto; width: 600px;
+    margin: 0 auto 0 50px; width: 600px;
 }
 
 header#main {
-    background-color: #003153; padding: 5px 0;
+    background-color: #fff; border-bottom: 6px solid #003153; padding: 20px 0 10px 0;
 }
-    header#main a {
-        color: #fff;
-    }
-    header#main a:hover {
-        text-decoration: none;
-    }
-    header#main h1 {
-        font-size: 16px;
+
+section#title {
+    border-bottom: 3px solid #d1e3ef; padding-bottom: 20px;
+}
+    section#title p {
+        color: #444; font-size: 21px; text-shadow: 1px 1px 0 #fff;
     }
 
 .content {
-    min-height: 500px; padding-top: 50px;
+    padding-top: 20px;
 }
 
 article {
-    margin-bottom: 60px;
+    background-color: #fff; padding: 20px 30px;
 }
     article header {
         text-align: center;
@@ -72,10 +70,10 @@ article {
     }
 
 .bottom {
-    border-bottom: 5px solid #003153; padding: 30px 0 50px 0;
+    background-color: #EFF9FF; border-bottom: 5px solid #003153; padding: 30px 30px 50px 30px; w\idth: 540px;
 }
     .about {
-        width: 350px;
+        width: 300px;
     }
         .about h3 {
             color: #003153; font-size: 22px; margin: 0; text-shadow: 1px 1px 0 #fff;
