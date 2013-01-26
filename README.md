@@ -5,7 +5,6 @@ $ sudo pip install fabric
 $ git clone git://github.com/berkerpeksag/berkerpeksag.git
 $ cd berkerpeksag/
 $ fab dev
-$ source bin/activate
 $ fab server
 ```
 
