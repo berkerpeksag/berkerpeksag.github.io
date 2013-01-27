@@ -81,7 +81,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
-    'blog.context_processors.debug_mode',
 )
 
 CORE_APPS = (
