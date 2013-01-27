@@ -16,7 +16,7 @@ def last_update_date(request, **kwargs):
 @last_modified(last_update_date)
 @render('blog/index')
 def index(request):
-    blogs = Post.objects.filter(status=True, archive=False)[:5]
+    blogs = Post.objects.filter(status=True, archive=False)[:3]
     return {'blogs': blogs}
 
 
