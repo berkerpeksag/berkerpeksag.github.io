@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import last_modified
 
@@ -6,6 +7,8 @@ from blog.models import Post
 
 
 def last_update_date(request, **kwargs):
+    if not settings.USE_ETAGS:
+        return None
     post = Post.objects
     if kwargs.get('slug'):
         update_date = post.get(slug=kwargs['slug']).update_date

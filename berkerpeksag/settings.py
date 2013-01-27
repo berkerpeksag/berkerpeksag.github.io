@@ -39,7 +39,7 @@ STATIC_ROOT = '{:s}/static/'.format(PROJECT_PATH)
 
 STATIC_URL = '/static/'
 
-USE_ETAGS = True
+USE_ETAGS = not DEBUG
 
 STATICFILES_DIRS = (
     '{:s}/blog/static'.format(PROJECT_PATH),
