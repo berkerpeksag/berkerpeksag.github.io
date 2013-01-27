@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '{:s}/blog.db'.format(PROJECT_PATH),
+        'NAME': '{:s}/dbblog.db'.format(PROJECT_PATH),
         'USER': '',
         'PASSWORD': '',
         'HOST': '',

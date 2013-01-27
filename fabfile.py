@@ -102,12 +102,12 @@ def setup():
 
 def get_db():
     """Get latest database."""
-    get('%(root)s%(project_name)s/blog.db' % env, '%(path)s')
+    get('%(root)s%(project_name)s/dbblog.db' % env, '%(path)s')
 
 
 def put_db():
     """Upload the database to production."""
-    put('blog.db', '%(root)s%(project_name)s/blog.db' % env, use_sudo=True)
+    put('dbblog.db', '%(root)s%(project_name)s/dbblog.db' % env, use_sudo=True)
 
 
 def delete_db():
