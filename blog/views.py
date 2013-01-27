@@ -30,6 +30,6 @@ def detail(request, slug):
 @last_modified(last_update_date)
 @render('blog/archive')
 def archive(request):
-    blogs = Post.objects.filter(status=True,
-        archive=False).values('slug', 'title', 'pub_date', 'body')
+    blogs = Post.objects.filter(status=True, archive=False) \
+                        .values('slug', 'title', 'pub_date', 'body')
     return {'blogs': blogs}
