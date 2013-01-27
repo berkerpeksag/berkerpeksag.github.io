@@ -6,10 +6,11 @@ from blog.models import Post
 
 
 def last_update_date(request, **kwargs):
+    post = Post.objects
     if kwargs.get('slug'):
-        update_date = Post.objects.get(slug=slug).values('update_date').update_date
+        update_date = post.get(slug=kwargs['slug']).update_date
     else:
-        update_date = Post.objects.latest('update_date').update_date
+        update_date = post.latest('update_date').update_date
     return update_date
 
 
