@@ -39,6 +39,8 @@ STATIC_ROOT = '{:s}/static/'.format(PROJECT_PATH)
 
 STATIC_URL = '/static/'
 
+USE_ETAGS = True
+
 STATICFILES_DIRS = (
     '{:s}/blog/static'.format(PROJECT_PATH),
 )
@@ -63,6 +65,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.http.ConditionalGetMiddleware',
     #'pipeline.middleware.MinifyHTMLMiddleware',
 )
 
