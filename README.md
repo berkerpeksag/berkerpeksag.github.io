@@ -1,5 +1,8 @@
 # Installation
 
+**Note:** You need to install [Fabric][fabric] system wide via *pip* or
+*easy_install*.
+
 ```sh
 $ git clone git://github.com/berkerpeksag/berkerpeksag.git
 $ cd berkerpeksag/
@@ -15,3 +18,5 @@ except where explicitly noted.
 > This Source Code Form is subject to the terms of the Mozilla Public
 > License, v. 2.0. If a copy of the MPL was not distributed with this
 > file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+[fabric]: http://fabfile.org
