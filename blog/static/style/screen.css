@@ -3,7 +3,7 @@ body {
 }
 
 article, footer, h1, h2, h3, h4, h5, h6, header, nav, ul, p {
-    margin: 0;
+    display: block; margin: 0;
 }
 
 a {
@@ -18,7 +18,7 @@ p {
 }
 
 .container {
-    margin: 0 auto 0 50px; width: 600px;
+    margin: 0 auto; width: 600px;
 }
 
 header#main {
@@ -26,18 +26,18 @@ header#main {
 }
 
 section#title {
-    border-bottom: 3px solid #d1e3ef; padding-bottom: 20px;
+    border-bottom: 3px solid #d1e3ef; padding: 20px 0;
 }
     section#title p {
         color: #444; font-size: 21px; text-shadow: 1px 1px 0 #fff;
     }
 
 .content {
-    padding-top: 20px;
+    background-color: #fff; padding: 40px 0 0 0;
 }
 
 article {
-    background-color: #fff; padding: 20px 30px;
+    padding: 0 30px 50px 30px;
 }
     article header {
         text-align: center;
@@ -85,12 +85,12 @@ article {
         float: right; padding-top: 50px;
     }
 
-footer {
-    padding-top: 20px; height: 75px;
+.footer {
+    display: block; height: 75px; padding: 20px 30px 0 30px; w\idth: 540px;
 }
-    footer nav ul li {
+    .footer > nav > ul li {
         float: left; padding-right: 25px;
     }
-        footer nav ul li a {
+        .footer > nav > ul li a {
             color: #666; font-weight: normal;
         }
