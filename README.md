@@ -1,13 +1,23 @@
 # Installation
 
-**Note:** You need to install [Fabric][fabric] system wide via *pip* or
-*easy_install*.
+**Note:** You need to install [Fabric][fabric] and [Virtualenv][venv] system
+wide via *pip* or *easy_install*.
 
 ```sh
 $ git clone git://github.com/berkerpeksag/berkerpeksag.git
 $ cd berkerpeksag/
 $ fab dev
+```
+
+## Running the development server
+
+**Note:** If you don't use [autoenv][autoenv], you need to activate
+Virtualenv manually.
+
+```sh
 $ fab server
+# or
+$ ./manage.py runserver
 ```
 
 ## License
@@ -20,3 +30,5 @@ except where explicitly noted.
 > file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 [fabric]: http://fabfile.org
+[venv]: http://virtualenv.org
+[autoenv]: https://github.com/kennethreitz/autoenv
