@@ -1,4 +1,4 @@
-# Installation
+## Installation
 
 **Note:** You need to install [Fabric][fabric] and [Virtualenv][venv] system
 wide via *pip* or *easy_install*.
