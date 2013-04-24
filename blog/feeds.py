@@ -1,13 +1,13 @@
 from django.contrib.syndication.views import Feed
 from django.utils.safestring import mark_safe
 
-from blog.models import Post
+from markdown import markdown
 
-import markdown
+from blog.models import Post
 
 
 def _markdown(value):
-    return mark_safe(markdown.markdown(value, ['codehilite']))
+    return mark_safe(markdown(value, ['codehilite']))
 
 
 class LatestEntriesFeed(Feed):
