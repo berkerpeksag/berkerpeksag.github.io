@@ -132,10 +132,10 @@ PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CssminCompressor'
 PIPELINE_CSS = {
     'base': {
         'source_filenames': (
-          'style/reset.css',
-          'style/screen.css',
-          'style/pygments.css',
-          'style/markdown.css',
+            'style/reset.css',
+            'style/screen.css',
+            'style/pygments.css',
+            'style/markdown.css',
         ),
         'output_filename': 'style/screen.min.css',
         'extra_context': {
