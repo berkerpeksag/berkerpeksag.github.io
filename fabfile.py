@@ -100,22 +100,6 @@ def setup():
     run('pip install virtualenv')
 
 
-def get_db():
-    """Get latest database."""
-    get('%(root)s%(project_name)s/dbblog.db' % env, '%(path)s')
-
-
-def put_db():
-    """Upload the database to production."""
-    put('dbblog.db', '%(root)s%(project_name)s/dbblog.db' % env, use_sudo=True)
-
-
-def delete_db():
-    """Delete the database from production."""
-    with cd('%(root)s%(project_name)s' % env):
-        run('rm *.db')
-
-
 def clean():
     """Clean the current setup."""
     stop()
