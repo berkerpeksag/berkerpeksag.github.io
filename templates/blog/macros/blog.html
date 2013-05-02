@@ -1,0 +1,22 @@
+{% macro blog_show(blog, split_first=False, title_link=True, share=False) %}
+<article>
+    <header>
+        {% if title_link %}
+        <h2><a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a></h2>
+        {% else %}
+        <h2>{{ blog.title }}</h2>
+        {% endif %}
+        <time datetime="{{ blog.pub_date|datetime('%c') }}" pubdate>Posted {{ blog.pub_date|timesince }} ago</time>
+    </header>
+
+    <div class="body">
+        {{ markup(blog.body, split_first=split_first) }}
+    </div>
+    {% if share %}
+    <div class="share">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal"
+           data-text="{{ blog.title }}" data-via="berkerpeksag">Tweet</a>
+    </div>
+    {% endif %}
+</article>
+{% endmacro %}

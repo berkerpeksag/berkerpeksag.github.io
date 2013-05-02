@@ -1,23 +1,11 @@
 {% extends "base.html" %}
-{% load markup %}
-{% load filters %}
 
 {% block title %}Archive{% endblock %}
 
 {% block content %}
 
-{% if blogs %}
-    {% for blog in blogs %}
-    <article>
-        <header>
-            <h2><a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a></h2>
-            <time datetime="{{ blog.pub_date|date:'c' }}" pubdate>Posted {{ blog.pub_date|timesince }} ago</time>
-        </header>
-        <div class="body">
-            {{ blog.body|splitfirst|markdown }}
-        </div>
-    </article>
-    {% endfor %}
-{% endif %}
+{% for blog in blogs %}
+    {{ blog_show(blog, split_first=True) }}
+{% endfor %}
 
 {% endblock content %}

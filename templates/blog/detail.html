@@ -1,25 +1,10 @@
 {% extends "base.html" %}
-{% load markup %}
 
 {% block title %}{{ blog.title }}{% endblock %}
 
 {% block content %}
 
-<article>
-    <header>
-        <h2>{{ blog.title }}</h2>
-        <time datetime="{{ blog.pub_date|date:'c' }}" pubdate>Posted {{ blog.pub_date|timesince }} ago</time>
-    </header>
-
-    <div class="body">
-        {{ blog.body|markdown:'codehilite' }}
-    </div>
-
-    <div class="share">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal"
-           data-text="{{ blog.title }}" data-via="berkerpeksag">Tweet</a>
-    </div>
-</article>
+    {{ blog_show(blog, title_link=False, share=True) }}
 
 {% endblock content %}
 

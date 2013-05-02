@@ -45,7 +45,7 @@ STATICFILES_DIRS = (
     '{:s}/blog/static'.format(PROJECT_PATH),
 )
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+STATICFILES_STORAGE = ''
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -55,6 +55,7 @@ STATICFILES_FINDERS = (
 SECRET_KEY = '!a485o-73611(dw4p@f^-ei+=bq2pelf!5mtz6xdi4ku!bm8wt'
 
 TEMPLATE_LOADERS = (
+    'jingo.Loader',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
@@ -66,7 +67,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.http.ConditionalGetMiddleware',
-    #'pipeline.middleware.MinifyHTMLMiddleware',
 )
 
 ROOT_URLCONF = 'berkerpeksag.urls'
@@ -89,14 +89,12 @@ CORE_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'django.contrib.markup',
     'django.contrib.sites',
 )
 
 EXTERNAL_APPS = (
     'gunicorn',
     'south',
-    'pipeline',
 )
 
 INTERNAL_APPS = (
@@ -127,19 +125,4 @@ LOGGING = {
     }
 }
 
-PIPELINE = not DEBUG
-PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CssminCompressor'
-PIPELINE_CSS = {
-    'base': {
-        'source_filenames': (
-            'style/reset.css',
-            'style/screen.css',
-            'style/pygments.css',
-            'style/markdown.css',
-        ),
-        'output_filename': 'style/screen.min.css',
-        'extra_context': {
-            'media': 'screen',
-        },
-    },
-}
+JINJA_CONFIG = {'autoescape': False}
