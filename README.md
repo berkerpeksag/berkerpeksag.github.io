@@ -17,7 +17,7 @@ Virtualenv manually.
 ```sh
 $ fab server
 # or
-$ ./manage.py runserver
+$ python manage.py runserver
 ```
 
 ## Theme
