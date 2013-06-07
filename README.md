@@ -20,6 +20,10 @@ $ fab server
 $ ./manage.py runserver
 ```
 
+## Theme
+
+![](assets/screenshot.png)
+
 ## License
 
 All files that are part of this project are covered by the following license,
