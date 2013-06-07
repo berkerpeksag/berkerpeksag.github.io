@@ -48,7 +48,7 @@ article {
         }
     article header.float {
         background: none repeat scroll 0 0 #fff; margin: 0 -8px; overflow: hidden;
-        padding: 0 8px 16px 8px; position: fixed; top: 0; width: 600px; z-index: 999;
+        padding: 0 8px 16px 8px; position: fixed; top: 0; width: 540px; z-index: 999;
     }
     article > .body {
 
