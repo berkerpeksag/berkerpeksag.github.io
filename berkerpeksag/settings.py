@@ -45,7 +45,7 @@ STATICFILES_DIRS = (
     '{:s}/blog/static'.format(PROJECT_PATH),
 )
 
-STATICFILES_STORAGE = ''
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -95,6 +95,7 @@ CORE_APPS = (
 EXTERNAL_APPS = (
     'gunicorn',
     'south',
+    'pipeline',
 )
 
 INTERNAL_APPS = (
@@ -125,4 +126,34 @@ LOGGING = {
     }
 }
 
-JINJA_CONFIG = {'autoescape': False}
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.jsmin.JSMinCompressor'
+PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CssminCompressor'
+PIPELINE_CSS = {
+    'base': {
+        'source_filenames': (
+            'style/reset.css',
+            'style/screen.css',
+            'style/pygments.css',
+            'style/markdown.css',
+        ),
+        'output_filename': 'style/screen.min.css',
+        'extra_context': {
+            'media': 'screen',
+        },
+        'template_name': 'pipeline/css.jinja',
+    },
+}
+PIPELINE_JS = {
+    'base': {
+        'source_filenames': (
+            'js/float.js',
+        ),
+        'output_filename': 'js/blog.min.js',
+        #'template_name': 'pipeline/js.jinja',
+    },
+}
+
+JINJA_CONFIG = {
+    'autoescape': False,
+    'extensions': ['pipeline.jinja2.ext.PipelineExtension'],
+}
