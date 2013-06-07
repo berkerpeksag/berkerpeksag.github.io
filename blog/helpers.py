@@ -1,3 +1,4 @@
+from django.utils.timesince import timesince as _timesince
 from jingo import register
 from markdown import markdown
 
@@ -26,4 +27,9 @@ def markup(string, extensions=None, split_first=False):
 
 @register.filter
 def timesince(string):
-    return string
+    if not string:
+        return ''
+    try:
+        return _timesince(string)
+    except (ValueError, TypeError):
+        return ''
