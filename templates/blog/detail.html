@@ -2,6 +2,14 @@
 
 {% block title %}{{ blog.title }}{% endblock %}
 
+{% block meta %}
+<meta name="twitter:site" content="@berkerpeksag">
+<meta name="twitter:creator" content="@berkerpeksag">
+<meta name="twitter:url" content="http://berkerpeksag.com/{{ blog.slug }}">
+<meta name="twitter:title" content="{{ blog.title }}">
+<meta name="twitter:description" content="{{ blog.body|splitfirst }}">
+{% endblock %}
+
 {% block content %}
 
     {{ blog_show(blog, title_link=False, share=True) }}
