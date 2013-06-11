@@ -126,6 +126,7 @@ LOGGING = {
     }
 }
 
+PIPELINE_ENABLED = not DEBUG
 PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.jsmin.JSMinCompressor'
 PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CssminCompressor'
 PIPELINE_CSS = {
