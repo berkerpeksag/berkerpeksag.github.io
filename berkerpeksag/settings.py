@@ -152,7 +152,7 @@ PIPELINE_JS = {
             'js/float.js',
         ),
         'output_filename': 'js/blog.min.js',
-        #'template_name': 'pipeline/js.jinja',
+        'template_name': 'pipeline/js.jinja',
     },
 }
 
