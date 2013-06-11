@@ -1,16 +1,28 @@
-from fabric.api import cd, env, get, local, put, run, sudo
+# coding: utf-8
 
-env.hosts = ['berkerpeksag.com']
-env.host = env.hosts[0]
-env.user = 'wakefield'
-env.password = ''
-env.project_name = 'berkerpeksag'
-env.root = '/home/wakefield/'
+from contextlib import contextmanager
+
+from fabric.api import cd, get, local, put, run, sudo, prefix
+
+try:
+    from fabenv import env
+except ImportError:
+    class ImproperlyConfigured(Exception):
+        """Application is somehow improperly configured."""
+
+    msg = "Kurulum için lütfen README.md belgesini okuyun."
+    raise ImproperlyConfigured(msg)
+
+
+@contextmanager
+def venv():
+    with cd('%(root)s%(project_name)s' % env), prefix(env.activate):
+        yield
 
 
 def deploy():
     """Deploy the latest version."""
-    with cd('%(root)s%(project_name)s' % env):
+    with venv():
         run('git pull')
 
     update_dependencies()
@@ -21,31 +33,34 @@ def deploy():
 
 def start_supervisord():
     """Start Supervisor daemon."""
-    with cd('%(root)s%(project_name)s' % env):
+    with venv():
         run('bin/supervisord')
 
 
 def update_supervisord():
     """Update Supervisor configuration."""
-    with cd('%(root)s%(project_name)s' % env):
+    with venv():
         run('git pull')
         sudo('mv conf/supervisor.conf /etc/supervisord.conf')
-        run('bin/supervisord')
+        run('supervisord')
 
 
 def start():
     """Start the Gunicorn process."""
-    run('%(root)s%(project_name)s/bin/supervisorctl start gunicorn' % env)
+    with venv():
+        run('supervisorctl start gunicorn')
 
 
 def stop():
     """Stop the Gunicorn process."""
-    run('%(root)s%(project_name)s/bin/supervisorctl stop gunicorn' % env)
+    with venv():
+        run('supervisorctl stop gunicorn')
 
 
 def restart():
     """Restart the Gunicorn process."""
-    run('%(root)s%(project_name)s/bin/supervisorctl restart gunicorn' % env)
+    with venv():
+        run('supervisorctl restart gunicorn')
 
 
 def restart_nginx():
@@ -55,20 +70,20 @@ def restart_nginx():
 
 def static():
     """Update static files."""
-    with cd('%(root)s%(project_name)s' % env):
+    with venv():
         sudo('rm -r static/')
         run('source bin/activate')
-        sudo('bin/python manage.py collectstatic --noinput')
-        restart_nginx()
+        sudo('python manage.py collectstatic --noinput')
 
 
 def update_dependencies():
     """Update requirements remotely."""
-    run('%(root)s%(project_name)s/bin/pip install -r %(root)s%(project_name)s/requirements.txt' % env)
+    with venv:
+        run('pip install -r requirements.txt')
 
 
 def update_local_deps():
-    """Update requirements remotely."""
+    """Update requirements locally."""
     local('pip install -r requirements.txt')
 
 
@@ -76,19 +91,18 @@ def configure():
     """Configure basic tools."""
     with cd(env.root):
         run('git clone git://github.com/berkerpeksag/berkerpeksag.git')
+        run('virtualenv venv')
+        run('source venv/bin/activate')
 
-    with cd('%(root)s%(project_name)s' % env):
-        run('virtualenv --no-site-packages .')
-        run('source bin/activate')
-        run('%(root)s%(project_name)s/bin/pip install -r %(root)s%(project_name)s/requirements.txt' % env)
+    with venv():
+        run('pip install -r requirements.txt')
         static()
         sudo('ln -s /home/wakefield/berkerpeksag/conf/nginx.conf /etc/nginx/sites-enabled/berkerpeksag.com')
-        run('bin/echo_supervisord_conf > supervisord.conf')
+        run('echo_supervisord_conf > supervisord.conf')
         sudo('mv supervisord.conf /etc/supervisord.conf')
         sudo('cat conf/supervisor.conf >> /etc/supervisord.conf')
-        run('bin/supervisord')
+        run('supervisord')
 
-    put_db()
     restart_nginx()
 
 
@@ -96,8 +110,8 @@ def setup():
     """Setup the VM."""
     sudo('apt-get update && apt-get upgrade && apt-get install git-core sqlite3 '
          'python-sqlite python-setuptools python-pip python-dev build-essential '
-         'nginx emacs23 curl libcurl3')
-    run('pip install virtualenv')
+         'nginx curl libcurl3')
+    sudo('pip install virtualenv fabric')
 
 
 def clean():
@@ -110,12 +124,17 @@ def clean():
         sudo('rm /etc/nginx/sites-enabled/berkerpeksag.com')
         sudo('rm /etc/supervisord.conf')
 
-def dev():
+
+def install():
     """Configures the development environment."""
-    local('virtualenv .')
-    local('bin/pip install -r requirements.txt')
-    local('cp berkerpeksag/settings_local.py.dist berkerpeksag/settings_local.py')
-    local('bin/python manage.py syncdb')
+    local('virtualenv venv')
+    with venv():
+        local('pip install -r requirements-dev.txt')
+        local('cp berkerpeksag/settings_local.py.dist berkerpeksag/settings_local.py')
+        local('python manage.py syncdb')
+
+
+# Development
 
 
 def server(port='8000'):

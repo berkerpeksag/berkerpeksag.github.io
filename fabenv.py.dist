@@ -1,0 +1,9 @@
+from fabric.api import env
+
+env.hosts = []
+env.host = env.hosts[0]
+env.user = ''
+env.password = ''
+env.project_name = ''
+env.root = ''
+env.activate = 'source venv/bin/activate'

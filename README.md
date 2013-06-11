@@ -6,7 +6,13 @@ wide via *pip* or *easy_install*.
 ```sh
 $ git clone git://github.com/berkerpeksag/berkerpeksag.git
 $ cd berkerpeksag/
-$ fab dev
+$ fab install
+```
+
+If you want to deploy the application to your server by using Fabric, type:
+
+```sh
+$ cp fabenv.py.dist fabenv.py
 ```
 
 ## Running the development server

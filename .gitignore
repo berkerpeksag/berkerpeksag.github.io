@@ -12,3 +12,4 @@ local
 static/
 doc/
 berkerpeksag/settings_local.py
+fabenv.py
