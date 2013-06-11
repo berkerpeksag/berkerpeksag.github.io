@@ -34,14 +34,14 @@ def deploy():
 def start_supervisord():
     """Start Supervisor daemon."""
     with venv():
-        run('bin/supervisord')
+        run('supervisord')
 
 
 def update_supervisord():
     """Update Supervisor configuration."""
     with venv():
         run('git pull')
-        sudo('mv conf/supervisor.conf /etc/supervisord.conf')
+        sudo('cp conf/supervisor.conf /etc/supervisord.conf')
         run('supervisord')
 
 
