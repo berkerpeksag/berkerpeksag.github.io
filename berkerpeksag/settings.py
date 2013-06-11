@@ -4,7 +4,7 @@ PROJECT_PATH = os.path.abspath(os.getcwd())
 
 DEBUG = TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['berkerpeksag.com']
+ALLOWED_HOSTS = ['berkerpeksag.com', 'localhost']
 
 ADMINS = (
     ('Berker Peksag', 'berker.peksag+blog@gmail.com'),
