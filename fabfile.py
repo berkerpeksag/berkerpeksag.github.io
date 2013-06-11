@@ -78,7 +78,7 @@ def static():
 
 def update_dependencies():
     """Update requirements remotely."""
-    with venv:
+    with venv():
         run('pip install -r requirements.txt')
 
 
