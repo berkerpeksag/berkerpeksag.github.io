@@ -19,6 +19,11 @@ class ArchiveListView(BlogListView):
 
 class BlogDetailView(DetailView):
 
-    queryset = Post.objects.filter(status=True)
     context_object_name = 'blog'
     template_name = 'blog/detail.html'
+
+    def get_queryset(self):
+        queryset = Post.objects
+        if not self.request.user.is_staff:
+            queryset = queryset.filter(status=True)
+        return queryset
