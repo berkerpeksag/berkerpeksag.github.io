@@ -3,7 +3,7 @@ from django.utils.safestring import mark_safe
 
 from markdown import markdown
 
-from blog.models import Post
+from .models import Post
 
 
 def _markdown(value):

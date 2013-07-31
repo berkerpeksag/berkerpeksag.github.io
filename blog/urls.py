@@ -1,8 +1,8 @@
 from django.conf.urls import patterns
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-from blog.feeds import LatestEntriesFeed
-from blog.views import ArchiveListView, BlogDetailView, BlogListView
+from .feeds import LatestEntriesFeed
+from .views import ArchiveListView, BlogDetailView, BlogListView
 
 
 urlpatterns = patterns('',
