@@ -13,7 +13,6 @@ urlpatterns += patterns('blog.views',
     (r'^$', BlogListView.as_view()),
     (r'^archive/$', ArchiveListView.as_view()),
     (r'^(?P<slug>[a-z0-9-]+)/$', BlogDetailView.as_view()),
-    (r'^blog/(?P<slug>[a-z0-9-]+)/$', BlogDetailView.as_view()),
 )
 
 urlpatterns += staticfiles_urlpatterns()
