@@ -148,15 +148,6 @@ PIPELINE_CSS = {
         'template_name': 'pipeline/css.jinja',
     },
 }
-PIPELINE_JS = {
-    'base': {
-        'source_filenames': (
-            'js/float.js',
-        ),
-        'output_filename': 'js/blog.min.js',
-        'template_name': 'pipeline/js.jinja',
-    },
-}
 
 JINJA_CONFIG = {
     'autoescape': False,
