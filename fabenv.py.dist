@@ -1,9 +1,10 @@
 from fabric.api import env
 
-env.hosts = []
+env.hosts = ['berkerpeksag.com']
 env.host = env.hosts[0]
-env.user = ''
+env.user = 'wakefield'
 env.password = ''
-env.project_name = ''
-env.root = ''
+env.project_name = 'berkerpeksag'
+env.domain = 'berkerpeksag.com'
+env.root = '/home/wakefield/'
 env.activate = 'source venv/bin/activate'
