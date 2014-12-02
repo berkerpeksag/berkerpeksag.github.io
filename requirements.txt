@@ -1,4 +1,4 @@
-Django==1.5.8
+Django==1.5.11
 Markdown==2.2.0
 cssmin==0.1.4
 gunicorn==0.17.4
