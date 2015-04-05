@@ -1,7 +1,7 @@
 ## Installation
 
 **Note:** You need to install [Fabric][fabric] and [Virtualenv][venv] system
-wide via *pip* or *easy_install*.
+wide via *pip*.
 
 ```sh
 $ git clone git://github.com/berkerpeksag/berkerpeksag.git
