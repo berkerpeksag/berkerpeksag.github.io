@@ -2,7 +2,7 @@
 <article>
     <header>
         {% if title_link %}
-        <h2><a href="/{{ blog.slug }}/" title="{{ blog.title }}">{{ blog.title }}</a></h2>
+        <h2><a href="/{{ blog.slug }}" title="{{ blog.title }}">{{ blog.title }}</a></h2>
         {% else %}
         <h2>{{ blog.title }}</h2>
         {% endif %}

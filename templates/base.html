@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <title>{% block title %}Berker Peksag{% endblock %}</title>
     {% block meta %}{% endblock %}
-    {% compressed_css 'base' %}
+    {# TODO: Implement a minify. #}
+    <link href="/static/style/reset.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/static/style/screen.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/static/style/pygments.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/static/style/markdown.css" rel="stylesheet" type="text/css" media="screen">
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAp0lEQVR4nO3XIQ4CMRCF4b/siEkICQmch0tgsZxiL4LHcAQsd0GQYFYgKiYU0S7bC+zWTM0kr+J9bVWDfS3RaHWhC6tW5eNygAMc4AAHOMABDnCAAxwgwyc2K99t1sjldm8G6M9Hwv5wSojmxBa4jarr/bgGGZ6vHC5RXiNKn6AKus2BxWlzzglg1AAtQdmce4pCHG8AptNbSWadCsT/E4SUmv3OAfgBvBZQo9Pdx/gAAAAASUVORK5CYII=">
     <script>
         var _gaq = _gaq || [];
@@ -31,8 +35,7 @@
 
     <div class="container">
         <section id="title">
-            <p>Welcome to my blog! See the <a href="/archive">archive</a> page for all posts,
-               and <a href="/feed">subscribe</a> to the feed.</p>
+            <p>Welcome to my blog! See the <a href="/archive.html">archive</a> page for all posts.</p>
         </section>
     </div>
 
@@ -65,8 +68,7 @@
         <nav>
             <ul>
                 <li><a href="/" title="Home">Home</a></li>
-                <li><a href="/archive/" title="Archive">Archive</a></li>
-                <li><a href="/feed/" title="Feed">Feed</a></li>
+                <li><a href="/archive.html" title="Archive">Archive</a></li>
                 <li><a href="https://github.com/berkerpeksag/blog" title="Source code">Source code</a></li>
             </ul>
         </nav>

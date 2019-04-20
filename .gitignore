@@ -1,7 +1,6 @@
 *.pyc
 .idea/
 bin
-build
 include
 lib
 local
@@ -13,3 +12,8 @@ static/
 doc/
 berkerpeksag/settings_local.py
 fabenv.py
+
+# For HTML output of the static file generator.
+build/*.html
+build/**/*.html
+build/static/
