@@ -148,11 +148,6 @@ app = Static('templates', 'posts', 'build')
 
 
 @app.reqister_filter
-def filter_splitfirst(string):
-    return string.splitlines()[0]
-
-
-@app.reqister_filter
 def filter_datetime(t, fmt=None):
     """Call datetime.datetime.strftime() with the given format string."""
     if fmt is None:
@@ -184,7 +179,7 @@ def filter_timesince(string):
 
 
 @app.register_function
-def function_markup(string, extensions=None, split_first=False):
+def function_markup(string, extensions=None):
     if extensions is None:
         extensions = ['codehilite']
     else:
@@ -195,8 +190,6 @@ def function_markup(string, extensions=None, split_first=False):
     else:
         options = {'safe_mode': False}
     output = markdown.markdown(string, extensions, **options)
-    if split_first:
-        return filter_splitfirst(output)
     return output
 
 

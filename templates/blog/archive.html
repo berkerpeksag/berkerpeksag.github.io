@@ -1,11 +1,3 @@
-{% extends "base.html" %}
+{% extends "blog/index.html" %}
 
 {% block title %}Archive{% endblock %}
-
-{% block content %}
-
-{% for blog in blogs %}
-    {{ blog_show(blog, split_first=True) }}
-{% endfor %}
-
-{% endblock content %}
