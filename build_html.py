@@ -1,15 +1,5 @@
 # coding: utf-8
 
-# TODOs:
-# - Add logging
-# - Copy static files
-# - Modularize code
-# - Add CLI
-# - nginx config file
-# - Deploy script
-# - Minimize static files
-# - Make it Python 3-only
-
 from __future__ import print_function, unicode_literals
 
 import collections
