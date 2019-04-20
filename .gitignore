@@ -1,18 +1,3 @@
-*.pyc
-.idea/
-bin
-include
-lib
-local
-.Python
-*.db
-*.sql
-*~
-static/
-doc/
-berkerpeksag/settings_local.py
-fabenv.py
-
 # For HTML output of the static file generator.
 build/*.html
 build/**/*.html
