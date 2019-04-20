@@ -37,4 +37,4 @@ def restart_nginx():
 def static():
     """Update static files."""
     with venv():
-        put('build', 'build')
+        put('build', '.')
