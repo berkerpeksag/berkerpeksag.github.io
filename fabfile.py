@@ -16,7 +16,7 @@ except ImportError:
 
 @contextmanager
 def venv():
-    with cd('%(root)s%(project_name)s' % env), prefix(env.activate):
+    with cd('%(root)s%(project_name)s' % env):
         yield
 
 
@@ -25,42 +25,7 @@ def deploy():
     with venv():
         run('git pull')
 
-    update_dependencies()
-    static()
     restart_nginx()
-    restart()
-
-
-def start_supervisord():
-    """Start Supervisor daemon."""
-    with venv():
-        run('supervisord')
-
-
-def update_supervisord():
-    """Update Supervisor configuration."""
-    with venv():
-        run('git pull')
-        sudo('cp conf/supervisor.conf /etc/supervisord.conf')
-        run('supervisord')
-
-
-def start():
-    """Start the Gunicorn process."""
-    with venv():
-        run('supervisorctl start gunicorn')
-
-
-def stop():
-    """Stop the Gunicorn process."""
-    with venv():
-        run('supervisorctl stop gunicorn')
-
-
-def restart():
-    """Restart the Gunicorn process."""
-    with venv():
-        run('supervisorctl restart gunicorn')
 
 
 def restart_nginx():
@@ -75,16 +40,6 @@ def static():
         run('source bin/activate')
         sudo('python manage.py collectstatic --noinput')
 
-
-def update_dependencies():
-    """Update requirements remotely."""
-    with venv():
-        run('pip install -r requirements.txt')
-
-
-def update_local_deps():
-    """Update requirements locally."""
-    local('pip install -r requirements.txt')
 
 
 def configure():
