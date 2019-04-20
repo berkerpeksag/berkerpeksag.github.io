@@ -2,21 +2,8 @@
 
 {% block title %}{{ blog.title }}{% endblock %}
 
-{% block meta %}
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@berkerpeksag">
-<meta name="twitter:creator" content="@berkerpeksag">
-<meta name="twitter:url" content="http://berkerpeksag.com/{{ blog.slug }}">
-<meta name="twitter:title" content="{{ blog.title }}">
-<meta name="twitter:description" content="{{ blog.body }}">
-{% endblock %}
-
 {% block content %}
 
-    {{ blog_show(blog, title_link=False, share=True) }}
+    {{ blog_show(blog, title_link=False) }}
 
 {% endblock content %}
-
-{% block script %}
-<script src="//platform.twitter.com/widgets.js"></script>
-{% endblock script %}

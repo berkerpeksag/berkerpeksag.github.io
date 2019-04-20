@@ -1,4 +1,4 @@
-{% macro blog_show(blog, title_link=True, share=False) %}
+{% macro blog_show(blog, title_link=True) %}
 <article>
     <header>
         {% if title_link %}
@@ -12,11 +12,5 @@
     <div class="body">
         {{ markup(blog.body) }}
     </div>
-    {% if share %}
-    <div class="share">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal"
-           data-text="{{ blog.title }}" data-via="berkerpeksag">Tweet</a>
-    </div>
-    {% endif %}
 </article>
 {% endmacro %}
