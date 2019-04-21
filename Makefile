@@ -12,6 +12,7 @@ serve:
 	python3 -m http.server --bind 127.0.0.1 8008
 
 upload-nginx-config:
-	scp conf/nginx.conf wakefield@berkerpeksag.com:/home/wakefield/berkerpeksag
+	scp conf/nginx.conf wakefield@berkerpeksag.com:/home/wakefield/berkerpeksag/conf
+	ssh -t wakefield@berkerpeksag.com "sudo /etc/init.d/nginx restart"
 
 .PHONY: build clean deploy serve upload-nginx-config
