@@ -20,11 +20,15 @@ class Post(collections.namedtuple('Post', ['title', 'slug', 'pub_date', 'update_
         return self.slug.startswith('posts/drafts/')
 
 
-def fmt_dt(s):
-    try:
-        return datetime.datetime.strptime(s, '%Y-%m-%d %H:%M:%S.%f')
-    except ValueError:
-        return datetime.datetime.strptime(s, '%Y-%m-%d %H:%M:%S')
+def format_datetime(dt):
+    for fmt in (
+        '%Y-%m-%d %H:%M:%S.%f',
+        '%Y-%m-%d %H:%M:%S',  # Legacy format
+    ):
+        try:
+            return datetime.datetime.strptime(dt, fmt)
+        except ValueError:
+            continue
 
 
 class Static(object):
@@ -95,8 +99,8 @@ class Static(object):
         return Post(
             title,
             html_path,
-            fmt_dt(pud_date.strip()),
-            fmt_dt(update_date.strip()),
+            format_datetime(pud_date.strip()),
+            format_datetime(update_date.strip()),
             body,
         )
 
@@ -109,8 +113,6 @@ class Static(object):
 
         for source_path, html_path in self.collect_source_files():
             post = self.build_post(source_path, html_path)
-            title, slug, pud_date, update_date, body = post
-            # print(slug, post.is_archive(), post.is_draft())
             if post.is_archive() and not post.is_draft():
                 self.posts['archived'].append(post)
             elif post.is_draft() and not post.is_archive():
@@ -144,17 +146,19 @@ class Static(object):
                     f.write(post_output)
 
 
-app = Static('templates', 'posts', 'build')
+app = Static(
+    template_path='templates',
+    source_path='posts',
+    build_dir='build',
+)
 
 
 @app.reqister_filter
-def filter_datetime(t, fmt=None):
+def filter_datetime(dt, fmt='%B %e, %Y'):
     """Call datetime.datetime.strftime() with the given format string."""
-    if fmt is None:
-        fmt = '%B %e, %Y'
     # TODO: This can be removed in Python 3.
     fmt = fmt.encode('utf-8')
-    return t.strftime(fmt) if t else ''
+    return dt.strftime(fmt) if dt else ''
 
 
 @app.reqister_filter
