@@ -1,5 +1,3 @@
-# coding: utf-8
-
 from __future__ import print_function, unicode_literals
 
 import collections
@@ -90,17 +88,17 @@ class Static(object):
         with io.open(source_path, encoding='utf-8') as f:
             lines = f.readlines()
         title = lines[0][2:].strip()
-        pud_date, update_date = lines[2].split(' | ')
+        pub_date, update_date = lines[2].split(' | ')
         body = function_markup(''.join(lines[6:]))
-        return title, pud_date, update_date, body
+        return title, pub_date.strip(), update_date.strip(), body
 
     def build_post(self, source_path, html_path):
-        title, pud_date, update_date, body = self.extract_post(source_path)
+        title, pub_date, update_date, body = self.extract_post(source_path)
         return Post(
             title,
             html_path,
-            format_datetime(pud_date.strip()),
-            format_datetime(update_date.strip()),
+            format_datetime(pub_date),
+            format_datetime(update_date),
             body,
         )
 
