@@ -1,1 +1,5 @@
 *.md text eol=crlf
+docs/*.html linguist-vendored
+docs/posts/*.html linguist-vendored
+docs/posts/archive/*.html linguist-vendored
+docs/posts/drafts/*.html linguist-vendored

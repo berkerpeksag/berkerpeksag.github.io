@@ -147,15 +147,13 @@ class Static(object):
 app = Static(
     template_path='templates',
     source_path='posts',
-    build_dir='build',
+    build_dir='docs',
 )
 
 
 @app.reqister_filter
 def filter_datetime(dt, fmt='%B %e, %Y'):
     """Call datetime.datetime.strftime() with the given format string."""
-    # TODO: This can be removed in Python 3.
-    fmt = fmt.encode('utf-8')
     return dt.strftime(fmt) if dt else ''
 
 

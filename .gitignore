@@ -1,4 +1,0 @@
-# For HTML output of the static file generator.
-build/*.html
-build/**/*.html
-build/static/
