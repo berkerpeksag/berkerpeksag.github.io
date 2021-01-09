@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Yeni kitaplar</title>
+    
+    
+    <link href="/static/style/reset.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/static/style/screen.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/static/style/pygments.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/static/style/markdown.css" rel="stylesheet" type="text/css" media="screen">
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAp0lEQVR4nO3XIQ4CMRCF4b/siEkICQmch0tgsZxiL4LHcAQsd0GQYFYgKiYU0S7bC+zWTM0kr+J9bVWDfS3RaHWhC6tW5eNygAMc4AAHOMABDnCAAxwgwyc2K99t1sjldm8G6M9Hwv5wSojmxBa4jarr/bgGGZ6vHC5RXiNKn6AKus2BxWlzzglg1AAtQdmce4pCHG8AptNbSWadCsT/E4SUmv3OAfgBvBZQo9Pdx/gAAAAASUVORK5CYII=">
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-3531951-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'),
+                protocol = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = protocol + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <header id="main">
+        <div class="container">
+            <a href="/" title="Home"><img alt="Home" src="data:image/png;base64,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"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="title">
+            <p>Welcome to my blog! See the <a href="/archive.html">archive</a> page for all posts.</p>
+        </section>
+    </div>
+
+    <div class="container content">
+        
+
+    
+<article>
+    <header>
+        
+        <h2>Yeni kitaplar</h2>
+        
+        <time datetime="Wed Mar  3 17:10:15 2010" pubdate>Posted 10 years ago</time>
+    </header>
+
+    <div class="body">
+        <p>Uzun süredir ertelediğim teknik kitap alma işini nihayet hallettim ve aşağıdakileri aldım. Gelelim ilk görüşlerime:</p>
+
+<ul>
+<li><a href="http://www.amazon.com/Version-Control-Git-Collaborative-Development/dp/0596520123"><strong>Version Control with Git: Powerful Tools and Techniques for Collaborative Software Development</strong></a> 
+Git geliştiricilerinden <strong>Jon Loeliger</strong>'ın kitabı. <a href="http://www.amazon.com/Pro-Git-Scott-Chacon/dp/1430218339/">Pro Git</a> arasında kararsız kalıp, epey yorum okuduktan sonra almaya karar verdim. Pro Git'in sitesinde yayımlanan ve <a href="http://progit.org/">ücretsiz okunabilen edisyonunu</a> inceleyip satın alacağım büyük ihtimalle. Özellikle Subversion'dan Git'e geçiş yapanlar için Git'in dağıtık mimarisini çok güzel açıklıyor kitap.</li>
+<li><a href="http://www.amazon.com/Hadoop-Definitive-Guide-Tom-White/dp/1449389732/"><strong>Hadoop: The Definitive Guide</strong></a>
+<a href="http://hadoop.apache.org/">Apache Hadoop</a> projesinin geliştiricilerinden <strong>Tom White</strong>'ın kitabı. FriendFeed'de <a href="http://bddemir.com/">Berk D. Demir</a>'in <a href="http://friendfeed.com/grkn/2d94c496/apache-hadoop-projesinin-bir-alt-projeleri">tavsiyesi üzerine</a> aldım. Zaten Hadoop üzerine pek fazla kitap yok. Henüz ilk iki bölümü tamamladım ve oldukça açıklayıcı bir kitap olduğunu söyleyebilirim. Eğer benim gibi başlangıç düzeyinde teorik bilginiz varsa, kitapla beraber Wikipedia ve Google'ı kullanarak kısa sürede temel bilgi edinebilirsiniz.</li>
+<li><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/"><strong>JavaScript: The Good Parts</strong></a>
+<a href="http://www.crockford.com/">Douglas Crockford</a> amcanın kitabını duymayan yoktur herhalde. Daha önce korsanlık yapıp e-book versiyonunu okumuştum. <em>"Emeğe saygı kardeş +rep"</em> deyip orijinalini de aldım :) <a href="http://developer.yahoo.net/blogs/theater/">YDN Theater</a>'daki sunumlarını izlediyseniz ve ortalamanın biraz üzerinde JavaScript bilginiz varsa çok yeni şeyler anlatmadığını göreceksiniz. Yine de her şekilde kitaplığınızda bulunması gereken güzel bir kitap.</li>
+<li><a href="http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X/"><strong>Pro JavaScript Design Patterns</strong></a>
+<a href="http://www.dustindiaz.com/">Web günlüğünü</a> zevkle takip ettiğim Dustin Diaz'ın, <a href="http://rossharmes.net/">Ross Harmes</a> ile beraber yazdığı kitabı. <code>Scope</code> ve <code>closure</code> gibi kavramlardan haberdar değilseniz kitaba dalmadan önce temel JavaScript bilgisine sahip olmanızı tavsiye ederim. Aksi takdirde kitaptan istediğiniz verimi alamayabilirsiniz.</li>
+<li><a href="http://www.amazon.com/Object-Oriented-JavaScript-high-quality-applications-libraries/dp/1847194141/"><strong>Object-Oriented JavaScript: Create scalable, reusable high-quality JavaScript applications and libraries</strong></a>
+<a href="http://www.phpied.com/">Stoyan Stefanov</a>'un kitabı hakkında çok fazla baside inerek anlattığına dair eleştiriler var. JavaScript ile ilgilenip, kitabı almış geliştiriclerin çoğunun zaten bildiği şeyleri tekrar tekrar okumak bazen rahatsızlık verse de çok da göze batacak bir şey değil. Üst düzey JavaScript bilginiz olduğunu düşünseniz de ilk iki bölümü dikkatli okumanızı tavsiye ederim. JavaScript konulu üç kitap içerisinde, fazla seviye ayrımına girmeden tavsiye edebileceğim yegane kitap budur diyebilirim rahatlıkla. Eğer başlangıç seviyesindeyseniz ve daha önce bir programlama dili ile ilgilendiyseniz, <em>yani döngü, değişken, programlama dili nedir biliyorsanız</em> JavaScript'i öğrenmek için bu kitaba dalabilirsiniz.</li>
+<li><a href="http://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/1430219483/"><strong>Coders at Work</strong></a>
+Sıra geldi en ilginç ve eğlenceli kitaba. <a href="http://www.amazon.com/Practical-Common-Lisp-Peter-Seibel/dp/1590592395/">Practical Common Lisp</a>'in yazarı <a href="http://www.gigamonkeys.com/">Peter Seibel</a>, bilgisayar dünyasına yön vermiş gurularla sohbet ediyor; programcılığa nasıl başladıklarını, önemli kararları nasıl aldıkları gibi sorular soruyor. Yanıtlar çok ilginç. Mesela çoğunluğu programcılığa BASIC ile başlamışlar; Lisp ve Emacs gurularından <a href="http://www.jwz.org/">Jamie Zawinski</a> aynı zamanda gece kulübü sahibiymiş :) Kısıtlı İngilizceniz bile olsa, küçük bir sözlük yardımıyla okumanızı kesinlikle tavsiye ediyorum. Bu arada, muhtemelen serinin devam kitapları da gelecektir. Zira epey eksik üstad var :) Kim bilir belki <a href="http://www.paulgraham.com/">Paul Graham</a>'ın <a href="http://www.paulgraham.com/hp.html">Hackers and Painters</a> <a href="http://www.amazon.com/Hackers-Painters-Big-Ideas-Computer/dp/0596006624">kitabı</a> gibi <a href="http://www.kitapyurdu.com/kitap/default.asp?id=128455">Türkçesi yayımlanır</a>.</li>
+</ul>
+
+<p>Son olarak, düzenli olarak okumasam da boş zamanlarımda devam ettiğim okuyabileceğiniz kitapları da verip, 2010 yılının ilk <em>-umarım son olmayacak-</em> kitap girdisini bitiriyorum:</p>
+
+<ul>
+<li><a href="http://www.amazon.com/Practical-Common-Lisp-Peter-Seibel/dp/1590592395/">Practical Common Lisp</a> - <a href="http://www.gigamonkeys.com/book/"><strong>Oku</strong></a></li>
+<li><a href="http://www.amazon.com/Pro-Git-Scott-Chacon/dp/1430218339/">Pro Git</a> - <a href="http://progit.org/"><strong>Oku</strong></a></li>
+</ul>
+
+<!-- meta: archive(1) active(1) -->
+    </div>
+</article>
+
+
+
+    </div>
+
+    <div class="container bottom">
+        <div class="github-badge">
+            <iframe src="http://githubbadge.appspot.com/badge/berkerpeksag?s=1"
+                    style="border: 0; height: 150px; width: 200px; overflow: hidden;"></iframe>
+        </div>
+        <div class="about">
+            <h3>About me</h3>
+            <p>
+                I'm an <a href="https://github.com/berkerpeksag">open source</a>
+                software developer and Python core developer from
+                Helsinki, Finland.
+            </p>
+            <p>
+                <a href="https://twitter.com/berkerpeksag/" rel="me"
+                   title="@berkerpeksag on Twitter">Follow me on Twitter</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="container footer">
+        <nav>
+            <ul>
+                <li><a href="/" title="Home">Home</a></li>
+                <li><a href="/archive.html" title="Archive">Archive</a></li>
+                <li><a href="https://github.com/berkerpeksag/blog" title="Source code">Source code</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    
+</body>
+</html>
