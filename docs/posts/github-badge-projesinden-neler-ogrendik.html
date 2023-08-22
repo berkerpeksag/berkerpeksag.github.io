@@ -11,19 +11,12 @@
     <link href="/static/style/pygments.css" rel="stylesheet" type="text/css" media="screen">
     <link href="/static/style/markdown.css" rel="stylesheet" type="text/css" media="screen">
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAp0lEQVR4nO3XIQ4CMRCF4b/siEkICQmch0tgsZxiL4LHcAQsd0GQYFYgKiYU0S7bC+zWTM0kr+J9bVWDfS3RaHWhC6tW5eNygAMc4AAHOMABDnCAAxwgwyc2K99t1sjldm8G6M9Hwv5wSojmxBa4jarr/bgGGZ6vHC5RXiNKn6AKus2BxWlzzglg1AAtQdmce4pCHG8AptNbSWadCsT/E4SUmv3OAfgBvBZQo9Pdx/gAAAAASUVORK5CYII=">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRWPNY64H"></script>
     <script>
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-3531951-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'),
-                protocol = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = protocol + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9BRWPNY64H');
     </script>
 </head>
 <body>
@@ -48,7 +41,7 @@
         
         <h2>GitHub Badge projesinden neler öğrendik</h2>
         
-        <time datetime="Sun May  6 12:52:30 2012" pubdate>Posted 8 years ago</time>
+        <time datetime="Sun May  6 12:52:30 2012" pubdate>Posted 11 years ago</time>
     </header>
 
     <div class="body">
@@ -57,23 +50,17 @@
 ilgili birkaç istatistiki bilginin gösterileceği ve geliştiricilerin özgeçmişlerine
 veya bloglarına koyabilecekleri basit bir bilgi alanından ibaretti. Aslında hala
 öyle ancak "birkaç istatistiki bilgi" kısmını biraz genişlettik.</p>
-
 <p>İlk sürümü yayınlandıktan sonra,</p>
-
 <ul>
 <li><a href="http://appengine.google.com/">Google App Engine</a>'in
   <a href="http://googleappengine.blogspot.com/2011/08/50-credit-for-new-billing-signups-and.html">ücret politikasının değişmesi</a></li>
 <li>Kullanıcı sayısının hızla artması</li>
 <li>Yeni eklenen özelliklerle uygulamanın kullandığı kaynağın artması</li>
 </ul>
-
 <p>gibi nedenlerle mevcut yapı App Engine'in ücretsiz kullanım limitlerini zorlamaya
 başladı.</p>
-
 <h3>Ölçeklenebilirlik</h3>
-
 <h4>Memcache</h4>
-
 <p>İlk yaptığımız şey üretilen HTML sayfasının belirsiz süreyle <a href="http://en.wikipedia.org/wiki/Memcache">Memcache</a>
 üzerinde önbelleğe alınmasıydı ki bu oldukça etkili bir çözüm oldu. Her ne kadar
 sunduğumuz bilgiler her zaman en güncel bilgiler olmasa da iletilen bir şikayet olmadı.
@@ -83,30 +70,24 @@ projeyi veya kullanıcı takip etmediyseniz ya da bir gönderi yapmadıysanız p
 ait bilgiler GitHub Badge'e göre daha eski olabilir). Ancak gönderi yoğunluğunu
 gösteren <a href="http://en.wikipedia.org/wiki/Sparkline">sparkline</a> özelliği yayına girdiğinde
 her öğenin yaşam süresini 24 saatle kısıtlamamız gerektiğine karar verdik.</p>
-
 <p>Bu durumun üzerine "bizi destekleyin" ve "Google Analytics'i kapat" gibi HTML çıktısını
 değiştiren özelliklerin eklenmesiyle sadece üretilen HTML sayfasının önbelleğe alınması
 yetmemeye başladı. Bu durumu çözmek için hesaplanan kullanıcı bilgilerinin bulunduğu
 sözlük nesnesini de JSON biçiminde önbellekte
 <a href="https://github.com/berkerpeksag/github-badge/commit/8ac138464207a192687729e8e9af7db6448ac31f">saklamaya </a>
 <a href="https://github.com/berkerpeksag/github-badge/commit/3e6526459901f56734b72d54984c7621166f4c6a">başladık</a>.</p>
-
 <p>Google App Engine, Memcache kullanımını ücretlendirmediği için alabildiğimiz tüm bilgileri
 Memcache ile önbelleğe aldık ya da önbelleğe aldığımız veri miktarını arttırmaya çalıştık.
 Bu durum, artan günlük ziyaretçi sayımıza ve kullanıcılarımıza rağmen hala ücretsiz kullanım
 sınırları içerisinde kalabilmemizin iki temel sebebinden bir tanesi.</p>
-
 <h4>Ön yüz</h4>
-
 <p>Ön yüzde neredeyse ilk sürümden beri HTML ve CSS sıkıştırma kullanıyoruz, Google App Engine
 de gzip kısmını kendisi hallediyor. Buna ek olarak
 <a href="https://github.com/berkerpeksag/github-badge/commit/08983f8d60e53a1798e07b2d772252eb1b65919a">tüm sayfanın yarım günlüğüne tarayıcı önbelleğine alınması</a>
 ve kişilerin GitHub'da görünen resimlerinin de sunucu tarafında yeniden boyutlandırılıp
 <a href="https://github.com/berkerpeksag/github-badge/issues/48">sayfaya gömülmesi</a> gibi optimizasyonlar
 ile bant genişliğimizi oldukça etkin kullanmayı başardık.</p>
-
 <h3>API kullanımı ve Pyresto</h3>
-
 <p>GitHub Badge'in ilk sürümünde, GitHub API'ı ilgili işleri yapmak, takipçi sayısı gibi
 bilgileri hesaplamak için <a href="https://github.com/berkerpeksag/github-badge/blob/v1/app.py#L23">bir nesne ve buna bağlı birkaç yöntem</a>
 yeterliydi. Gönderi grafiği, kişinin kendisi dışındaki toplam proje takipçi sayısı gibi veri
@@ -117,7 +98,6 @@ olmadığını gördük ve "<a href="http://en.wikipedia.org/wiki/One_Ring">heps
 diyerek "adam gibi yazılmış" <a href="http://en.wikipedia.org/wiki/REST">REST</a> tabanlı her türlü
 uygulama arayüzü ile çalışacak bir <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a>
 projesi yazmaya karar verdik. İlk kurbanımız elbette ki GitHub olacaktı.</p>
-
 <p>Bu noktada GitHub'ın sunduğu uygulama geliştirme arayüzünün <a href="http://developer.github.com/v3/">üçüncü sürümünün</a>
 gerçekten mükemmele çok yakın olduğunu, mükemmel olmayan kısımlarında da GitHub ekibinin
 yaptığımız hata bildirimleri ve özellik isteklerine olumlu ve hızlı yanıt verdiğini belirtmekte
@@ -130,39 +110,31 @@ farklı platformların geliştirme arayüzü tanımlamalarını olabildiğince b
 ibaret. Bu kod elbette tam değil ve her şeyi kapsamıyor ancak yaptığımız ve sıradan olmaktan
 uzak GitHub uygulaması için fazlasıyla yeterli. İşin güzel yanı bu 70 satırın çoğu aslında
 veri modelini tanımlıyor, yani gerçek kod değil.</p>
-
 <p>Sözün özü GitHub Badge projesinin kalbinde aslında Pyresto yatıyor ve bir sonraki hedefimiz
 bu kütüphaneyi hem belgelemesi hem de testleri ile herkesin rahatça kullanabileceği bir hale
 getirip yaygınlaşmasını sağlamak. Şu anki hali de <a href="http://pypi.python.org/pypi/pyresto/">PyPI üzerinden indirilebilir durumda</a>.</p>
-
 <h3>Arayüz</h3>
-
 <p>Eklenen yeni özelliklerle beraber, bu özelliklerin son kullanıcıya nasıl sunulacağı da önemli
 bir soru haline geldi. Bu nedenle arayüz toplamda üç kez değişti. Bu süreç, ürünün özelliklerini
 kısıtlı bir alanda, kullanıcının kafasını karıştırmadan, mümkün olan en sade ve güzel tasarımla,
 olabilecek en fazla bilgiyi sunmaya çalışmak gibi hedefler nedeniyle epey öğretici ancak bize
 göre sunum konusunda hala olması gerekenden uzakta olan bir tasarım deneyimi oldu. Yani bu
 konuda <a href="https://github.com/berkerpeksag/github-badge/issues/new">tavsiyelere açığız</a>.</p>
-
 <h3>Açık kaynak topluluğu ile iletişim</h3>
-
 <p>GitHub Badge öncesinde başta <a href="http://www.mozilla.org/contribute">Mozilla</a> ve <a href="http://www.python.org/">Python</a>
 olmak üzere açık kaynak projelere katkıda bulunuyorduk ancak <a href="https://github.com/berkerpeksag/jGrow">jGrow</a>
 haricinde sıfırdan yazdığımız ve topluluktan geribildirim aldığımız bir proje geliştirmemiştik.
 GitHub Badge ilk katkılarını yayına girdikten birkaç saat sonra aldı. Test sürecinde farketmediğimiz
 hataları da yine bu sayede düzelttik.</p>
-
 <p>Bir açık kaynak projeye katkıda bulunmanın tek yolu kod yazmak değil. Başlangıçta çok basit olarak
 düşündüğümüz proje, <a href="https://github.com/emres">Emre Sevinç</a>'in <a href="https://github.com/berkerpeksag/github-badge/issues/8">katkılarıyla</a>
 çok daha fazla bilgi sunar hale geldi. Her ne kadar yeni sürümlerde eklediğimiz JSONP ve CORS
 tabanlı API'lar için beklediğimiz geri bildirimi alamamış olsak da sağlıklı bir açık kaynak proje
 nasıl olur ve nasıl gelişir konularında bir miktar tecrübe kazandık.</p>
-
 <blockquote>
 <p>Bu yazı projenin diğer geliştiricisi olan <a href="http://twitter.com/madBYK">Burak Yiğit Kaya</a> ile
 birlikte hazırlanmış olup, kendisinin <a href="http://blog.byk.im/">blogunda</a> da <a href="http://blog.byk.im/2012/05/github-badge-projesinden-neler-ogrendik.html">yayınlanmıştır</a>.</p>
 </blockquote>
-
 <!-- meta: archive(0) active(1) -->
     </div>
 </article>
