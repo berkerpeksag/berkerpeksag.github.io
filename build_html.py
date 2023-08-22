@@ -189,7 +189,7 @@ def function_markup(string, extensions=None):
         options = {'safe_mode': True, 'enable_attributes': False}
     else:
         options = {'safe_mode': False}
-    output = markdown.markdown(string, extensions, **options)
+    output = markdown.markdown(string, extensions=extensions, **options)
     return output
 
 
