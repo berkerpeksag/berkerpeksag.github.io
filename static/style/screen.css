@@ -87,3 +87,39 @@ article {
         .footer > nav > ul li a {
             color: #666; font-weight: normal;
         }
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px; /* Add padding for better readability. */
+    }
+
+    header#main {
+        padding: 10px 0;
+    }
+
+    section#title {
+        padding: 10px 0;
+    }
+
+    .content {
+        padding: 20px 0;
+    }
+
+    article {
+        padding: 0 20px 30px;
+    }
+
+    .bottom {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .footer {
+        padding: 20px;
+        width: 100%;
+    }
+    .footer > nav > ul li {
+        padding-right: 10px;
+    }
+}
