@@ -151,33 +151,6 @@ app = Static(
 )
 
 
-@app.reqister_filter
-def filter_datetime(dt, fmt='%B %e, %Y'):
-    """Call datetime.datetime.strftime() with the given format string."""
-    return dt.strftime(fmt) if dt else ''
-
-
-@app.reqister_filter
-def filter_timesince(string):
-    if not string:
-        return ''
-    now = datetime.datetime.now()
-    diff = now - string
-    periods = (
-        (diff.days / 365, 'year', 'years'),
-        (diff.days / 30, 'month', 'months'),
-        (diff.days / 7, 'week', 'weeks'),
-        (diff.days, 'day', 'days'),
-        (diff.seconds / 3600, 'hour', 'hours'),
-        (diff.seconds / 60, 'minute', 'minutes'),
-        (diff.seconds, 'second', 'seconds'),
-    )
-    for period, singular, plural in periods:
-        if period >= 1:
-            return '%d %s' % (period, singular if period == 1 else plural)
-    return default
-
-
 @app.register_function
 def function_markup(string, extensions=None):
     if extensions is None:
