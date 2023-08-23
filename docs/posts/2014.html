@@ -41,7 +41,7 @@
         
         <h2>2014</h2>
         
-        <time datetime="Fri Dec 27 17:23:58 2013" pubdate>Posted 9 years ago</time>
+        <time datetime="2013-12-27 17:23:58.894931" pubdate>2013-12-27 17:23:58.894931</time>
     </header>
 
     <div class="body">
@@ -124,6 +124,37 @@ konulara dağılmadan biraz daha gelişebilmeyi hedefliyorum.</p>
         </nav>
     </div>
 
-    
+    <script>
+        function calculateTimesince(datetime_string) {
+            if (!datetime_string) {
+                return '';
+            }
+            const now = new Date();
+            const diff = now - new Date(datetime_string);
+            const periods = [
+                [diff / (365 * 24 * 60 * 60 * 1000), 'year', 'years'],
+                [diff / (30 * 24 * 60 * 60 * 1000), 'month', 'months'],
+                [diff / (7 * 24 * 60 * 60 * 1000), 'week', 'weeks'],
+                [diff / (24 * 60 * 60 * 1000), 'day', 'days'],
+                [diff / (60 * 60 * 1000), 'hour', 'hours'],
+                [diff / (60 * 1000), 'minute', 'minutes'],
+                [diff / 1000, 'second', 'seconds'],
+            ];
+            for (const [period, singular, plural] of periods) {
+                if (period >= 1) {
+                    return `${Math.floor(period)} ${period === 1 ? singular : plural}`;
+                }
+            }
+            return 'just now';
+        }
+
+        const timeElements = document.querySelectorAll('time');
+
+        timeElements.forEach(timeElement => {
+            const timestamp = timeElement.getAttribute('datetime');
+            const timeSince = calculateTimesince(timestamp);
+            timeElement.textContent = `Posted ${timeSince}${timeSince === 'just now' ? '' : ' ago'}`;
+        });
+    </script>
 </body>
 </html>
