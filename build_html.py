@@ -1,8 +1,5 @@
-from __future__ import print_function, unicode_literals
-
 import collections
 import datetime
-import io
 import os
 
 import jinja2
@@ -29,7 +26,7 @@ def format_datetime(dt):
             continue
 
 
-class Static(object):
+class Static:
 
     def __init__(self, template_path, source_path, build_dir):
         self.filters = {}
@@ -85,7 +82,7 @@ class Static(object):
         return result
 
     def extract_post(self, source_path):
-        with io.open(source_path, encoding='utf-8') as f:
+        with open(source_path, encoding='utf-8') as f:
             lines = f.readlines()
         title = lines[0][2:].strip()
         pub_date, update_date = lines[2].split(' | ')
@@ -125,13 +122,13 @@ class Static(object):
         index_output = self.render_index(blogs=self.posts['published'])
         index_path = os.path.join(self.build_dir, 'index.html')
 
-        with io.open(index_path, 'w', encoding='utf-8') as f:
+        with open(index_path, 'w', encoding='utf-8') as f:
             f.write(index_output)
 
         archive_output = self.render_archive(blogs=self.posts['archived'])
         archive_path = os.path.join(self.build_dir, 'archive.html')
 
-        with io.open(archive_path, 'w', encoding='utf-8') as f:
+        with open(archive_path, 'w', encoding='utf-8') as f:
             f.write(archive_output)
 
         for category, posts in self.posts.items():
@@ -140,7 +137,7 @@ class Static(object):
                 print(post.title)
                 post_output = self.render_detail(blog=post)
                 post_path = os.path.join(self.build_dir, post.slug)
-                with io.open(post_path, 'w', encoding='utf-8') as f:
+                with open(post_path, 'w', encoding='utf-8') as f:
                     f.write(post_output)
 
 
