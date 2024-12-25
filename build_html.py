@@ -7,7 +7,6 @@ import markdown
 
 
 class Post(collections.namedtuple('Post', ['title', 'slug', 'pub_date', 'update_date', 'body'])):
-
     def is_archive(self):
         return self.slug.startswith('posts/archive/')
 
@@ -27,7 +26,6 @@ def format_datetime(dt):
 
 
 class Static:
-
     def __init__(self, template_path, source_path, build_dir):
         self.filters = {}
         self.globals = {}
@@ -149,18 +147,8 @@ app = Static(
 
 
 @app.register_function
-def function_markup(string, extensions=None):
-    if extensions is None:
-        extensions = ['codehilite']
-    else:
-        extensions = [ext for ext in extensions.split(',') if ext]
-    if 'safe' in extensions:
-        extensions = extensions.remove('safe')
-        options = {'safe_mode': True, 'enable_attributes': False}
-    else:
-        options = {'safe_mode': False}
-    output = markdown.markdown(string, extensions=extensions, **options)
-    return output
+def function_markup(string):
+    return markdown.markdown(string)
 
 
 if __name__ == '__main__':

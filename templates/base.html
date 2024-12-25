@@ -1,11 +1,11 @@
 {% from "blog/macros/blog.html" import blog_show with context %}
+{{ is_index }}
 <!DOCTYPE html>
 <html lang="en">
     <head>
     <meta charset="utf-8">
     <title>{% block title %}Berker Peksag{% endblock %}</title>
     {% block meta %}{% endblock %}
-    {# TODO: Implement a minify. #}
     <link href="/static/style/reset.css" rel="stylesheet" type="text/css" media="screen">
     <link href="/static/style/screen.css" rel="stylesheet" type="text/css" media="screen">
     <link href="/static/style/pygments.css" rel="stylesheet" type="text/css" media="screen">
@@ -37,14 +37,10 @@
     </div>
 
     <div class="container bottom">
-        <div class="github-badge">
-            <iframe src="https://githubbadge.appspot.com/badge/berkerpeksag?s=1"
-                    style="border: 0; height: 150px; width: 200px; overflow: hidden;"></iframe>
-        </div>
         <div class="about">
             <h3>About me</h3>
             <p>
-                I'm a software developer and Python core developer currently
+                I'm a senior software developer and Python core developer currently
                 living in Helsinki, Finland.
             </p>
             <p>

@@ -1,16 +1,13 @@
-{% macro blog_show(blog, title_link=True) %}
+{% macro blog_show(blog) %}
 <article>
     <header>
-        {% if title_link %}
-        <h2><a href="/{{ blog.slug }}" title="{{ blog.title }}">{{ blog.title }}</a></h2>
-        {% else %}
         <h2>{{ blog.title }}</h2>
-        {% endif %}
         <time datetime="{{ blog.pub_date }}" pubdate>{{ blog.pub_date }}</time>
     </header>
 
     <div class="body">
         {{ markup(blog.body) }}
     </div>
+
 </article>
 {% endmacro %}

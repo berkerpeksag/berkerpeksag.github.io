@@ -1,9 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-{% for blog in blogs %}
-    {{ blog_show(blog) }}
-{% endfor %}
-
+<article>
+  <header><h2>{% block title %}Posts{% endblock %}</h2></header>
+  <div class="body">
+    <ul class="posts">
+      {%- for blog in blogs %}
+      <li>
+	<a href="{{ blog.slug }}">{{ blog.title }}</a> &mdash;
+	<time datetime="{{ blog.pub_date }}" pubdate>{{ blog.pub_date }}</time>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</article>
 {% endblock content %}

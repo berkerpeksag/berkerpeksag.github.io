@@ -28,11 +28,3 @@ code {
     background-color: #f6f6f6; border: 1px solid #eaeaea; border-radius: 3px; margin: 0 2px; padding: 0 5px;
     white-space: nowrap;
 }
-
-.codehilite {
-    margin: 30px 0;
-}
-    .codehilite pre {
-        background-color: #f8f8f8; border: 1px solid #ccc; border-radius: 3px; margin: 0; overflow-x: auto;
-        padding: 15px 15px;
-    }

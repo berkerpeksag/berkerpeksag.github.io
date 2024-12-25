@@ -37,7 +37,7 @@ section#title {
 }
 
 article {
-    padding: 0 30px 50px 30px;
+    padding: 0 30px 40px 30px;
 }
     article header {
         text-align: center;
@@ -58,6 +58,15 @@ article {
             .body > ul > li {
                 color: #333; margin-bottom: 20px;
             }
+	    .body > ul > li:last-child {
+                margin-bottom: 0;
+	    }
+	.body > ul.posts {
+
+	}
+	.body > ul.posts > li > time {
+            color: #666; font-size: 14px;
+	}
     article .body-padding {
         padding-top: 64px;
     }
@@ -66,7 +75,7 @@ article {
     background-color: #EFF9FF; border-bottom: 5px solid #003153; padding: 30px 30px 50px 30px; w\idth: 540px;
 }
     .about {
-        width: 300px;
+
     }
         .about h3 {
             color: #003153; font-size: 22px; margin: 0; text-shadow: 1px 1px 0 #fff;
@@ -74,9 +83,6 @@ article {
         .about p {
             color: #222; line-height: 1.5em; margin-top: 20px; text-shadow: 1px 1px 0 #fff;
         }
-    .github-badge {
-        float: right; padding-top: 50px;
-    }
 
 .footer {
     display: block; height: 75px; padding: 20px 30px 0 30px; w\idth: 540px;
