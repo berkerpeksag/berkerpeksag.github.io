@@ -1,8 +1,6 @@
 ## Installation
 
 ```sh
-$ git clone git://github.com/berkerpeksag/berkerpeksag.git
-$ cd berkerpeksag/
 $ make build
 ```
 
